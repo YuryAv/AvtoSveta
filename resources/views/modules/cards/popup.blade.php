@@ -1,0 +1,12 @@
+<section class="popup" style="display: none">
+    <div class="container popup__container">
+        <div class="popup__inner" style="display: none">
+            <form class="form popup__form" action="">
+                <h3 class="form__title">Оставьте заявку и наш специалист свяжется с вами для консультации</h3>
+                <input class="form__input" type="text" name="" placeholder="Ваше имя"/>
+                <input class="form__input" type="tel" name="" placeholder="Ваш телефон"/>
+                <button class="button button--second form__button" type="button">Отправить</button>
+            </form>
+        </div>
+    </div>
+</section>

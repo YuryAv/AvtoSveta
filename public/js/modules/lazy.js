@@ -1,0 +1,1 @@
+"use strict";$(".lazy").Lazy();

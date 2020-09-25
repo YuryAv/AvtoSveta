@@ -1,0 +1,1 @@
+"use strict";$(".card__button").on("click",(function(){$("section.popup form textarea").text("Хочу спросить по поводу "+$(this).closest(".card").find(".card__title").text()+"...")}));

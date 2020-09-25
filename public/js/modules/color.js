@@ -1,0 +1,1 @@
+"use strict";$("head").append('<style rel="stylesheet">\n                        :root {\n                            --btnColor: #FA2828; \n                            --mainColor: #1B4788; \n                            --bgColor: #ffffff;\n                        }\n                    </style>');
