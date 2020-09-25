@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
@@ -25,6 +26,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Paginator::useBootstrap();
+
         Blade::directive('svg', function ($expression)
         {
             return "<?php echo Storage::disk('public')->get(json_decode($expression)[0]->download_link); ?>";
