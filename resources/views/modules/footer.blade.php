@@ -6,25 +6,11 @@
                     <p class="fn-col__title">Каталог</p>
                     <div class="fn-col__inner">
                         <ul class="fn-col__list">
-                            <li class="fn-col__item"><a class="fn-col__link" href="">Битые авто</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">AUDI</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">BMW</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">Honda</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">Hyundai</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">Ford</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">Kia</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">Lexus</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">Chevrolet</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">Mazda</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">Mercedes</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">Mitsubishi</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">Nissan</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">Subaru</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">Toyota</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">Tesla</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">VW</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">Мото техника</a></li>
-                            <li class="fn-col__item"><a class="fn-col__link" href="">Спец техника</a></li>
+                            @foreach($brands as $brand)
+                                @if($brand->show)
+                                <li class="fn-col__item"><a class="fn-col__link" href="{{ route('catalog', ['brand' => $brand->name]) }}">{{ $brand->name }}</a></li>
+                                @endif
+                            @endforeach
                         </ul>
                         <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
                         <script src="https://yastatic.net/share2/share.js"></script>

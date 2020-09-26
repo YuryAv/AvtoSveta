@@ -26,7 +26,7 @@ Route::get('/news/{id?}', [\App\Http\Controllers\NewsController::class, 'showNew
 
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, 'index']);
 
-Route::get('/catalog', [\App\Http\Controllers\CatalogController::class, 'index']);
+Route::get('/catalog/{brand?}', [\App\Http\Controllers\CatalogController::class, 'index'])->name('catalog');
 
 Route::get('/delivery', [\App\Http\Controllers\DeliveryController::class, 'index']);
 
@@ -39,11 +39,6 @@ Route::get('/track', [\App\Http\Controllers\TrackController::class, 'index']);
 Route::get('/cards/1', [\App\Http\Controllers\CardController::class, 'index']);
 
 Route::post('/feedback', [\App\Http\Controllers\FeedbackController::class, 'index'])->name('feedback');
-
-Route::get('/testi', function () {
-    echo menu('main', 'main_menu');
-});
-
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

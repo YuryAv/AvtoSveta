@@ -1,6 +1,6 @@
 <div class="card"><a class="card__link" href="card-inner.html">
         <div class="card__tags"><span class="card__tag tag tag--blue">new</span></div>
-        <img class="card__image lazy" data-src="{{ 'storage/' . json_decode($car->images)[0] }}" alt="..."/></a>
+        <img class="card__image lazy" data-src="{{ asset('storage/' . json_decode($car->images)[0]) }}" alt="..."/></a>
     <div class="card__body">
         <h4 class="card__title">{{ $car->name }}</h4>
         <p class="card__price">$ {{ $car->price }}</p>
