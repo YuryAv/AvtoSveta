@@ -1,0 +1,132 @@
+@import _colors
+@import _mixines
+
+.navigation
+    // @media screen and ( max-width: 1199px )
+    &__item
+        margin: 0 0.5em
+        position: relative
+        @media screen and ( max-width: 767px )
+            border-top: 1px solid $blue
+            border-left: 1px solid $blue
+            border-right: 1px solid $blue
+            &:last-of-type
+                border-bottom: 1px solid $blue
+        &-inner
+            @media screen and ( max-width: 767px )
+                display: flex
+                justify-content: space-between
+        @media screen and ( max-width: 991px )
+            margin: 0
+        &:hover 
+            .sub-menu
+                display: block
+        &:first-of-type
+            .navigation__link
+                margin-left: 0
+        &:last-of-type
+            .navigation__link
+                margin-right: 0
+    &__list
+        display: flex
+        @media screen and ( max-width: 767px )
+            flex-direction: column
+            width: calc(100% - 30px)
+            max-width: 350px
+    &__link
+        +t19
+        color: $blue
+        display: block
+        text-transform: uppercase
+        text-decoration: none
+        padding: 0.5em 0.8em
+        @media screen and ( max-width: 767px )
+            width: 100%
+        &-icon
+            display: none
+            @media screen and ( max-width: 767px )
+                display: block
+                position: relative
+                height: 3em
+                width: 3em
+                min-height: 3em
+                min-width: 3em
+                background: $blue
+                svg 
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    height: 1.5em
+                    width: 1.5em
+                    min-height: 1.5em
+                    min-width: 1.5em
+                    fill: $bgColor
+                    transition: transform .3s
+                &--active
+                    svg
+                        transform: translate(-50%, -50%) rotate(180deg)
+        @media screen and ( max-width: 767px )
+            +t28
+        &--sub            
+            @media screen and ( max-width: 767px )
+                &::after
+                    content: ''
+                    height: 1em
+                    background: url('../img/svg/down-arrow.svg') no-repeat center center / contain
+        &:hover
+            text-decoration-color: $red
+            color: $blue
+    &__inner
+        @media screen and ( max-width: 767px )
+            position: fixed
+            left: 0
+            width: 100%
+            background: $bgColor
+            transition: transform 0.3s
+            transform: translateY(150%)
+            display: flex
+            align-items: flex-start
+            justify-content: center
+            padding-top: 2rem
+            padding-bottom: 2rem
+            overflow: auto
+            z-index: 0
+            &--opened
+                z-index: 6
+                transform: translateY(0%)
+
+
+.mobile
+    flex-direction: column
+    align-items: center
+    font-size: 10px
+    padding: 0.5em
+    width: 4.2em
+    display: none
+    @media screen and ( max-width: 767px )
+        display: flex
+    &__line
+        font-size: 1em
+        display: block
+        background: $blue
+        height: .3em
+        width: 3.2em
+        // border-radius: 0.15em
+        transition: transform .3s
+        transform-origin: 50% 50%
+        &:nth-of-type(1)
+            transform: translateY(-150%)
+        &:nth-of-type(3)
+            transform: translateY(150%)
+    &--active
+        .mobile__line
+            background: $red
+            &:nth-of-type(1)
+                transform: translateY(100%) rotate(45deg)
+            &:nth-of-type(2)
+                transform: scale(0)
+            &:nth-of-type(3)
+                transform: translateY(-100%) rotate(-45deg)
+
+            

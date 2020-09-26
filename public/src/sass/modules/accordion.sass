@@ -1,0 +1,36 @@
+@import _colors
+@import _mixines
+
+.accordion
+    border: 1px solid $blue
+    +t16
+    // border-radius: 0.4em
+    margin-bottom: 1em
+    &--opened
+        .accordion__arrow
+            transform: translateY(-50%) rotate(180deg)
+    &__arrow
+        height: 1em
+        width: auto
+        position: absolute
+        top: 50%
+        right: 1em
+        transform: translateY(-50%)
+        transition: transform .2s
+        fill: $red
+    &__header
+        position: relative
+        cursor: pointer
+        &-text
+            +t19
+            color: $blue
+            padding: 1em
+            padding-right: 2em
+    &__body
+        padding: 1.5em
+        padding-top: 0
+        &-text
+            +t16
+            color: $blue
+            margin-bottom: 1em
+            opacity: 0.9

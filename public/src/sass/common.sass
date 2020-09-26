@@ -1,0 +1,56 @@
+@import '../../node_modules/css-reset-and-normalize/scss/reset-and-normalize.scss'
+@import '../../node_modules/css-reset-and-normalize/scss/link-reset.scss'
+@import '../../node_modules/css-reset-and-normalize/scss/button-reset.scss'
+@import modules/slick
+@import modules/_colors
+@import modules/_mixines
+
+html
+    font-size: 16px
+    scroll-behavior: smooth
+
+body
+    background: $bgColor
+
+.body
+    &--overflow
+        overflow: hidden
+
+.container
+    @media screen  and ( min-width: 1600px )
+        max-width: 1440px
+
+.section
+    padding: 65px 0
+    +calc-pad(65px)
+    &--small
+        padding: 35px 0
+        +calc-pad(35px)
+
+.slide-wrap
+    padding: 0 5px
+
+.image
+    margin-bottom: 2rem
+    &--full
+        width: 100%
+        height: auto
+        max-width: 100%
+        object-fit: cover
+    &--middle
+        display: block
+        width: 80%
+        margin: 0 auto 2rem
+    &--short
+        float: left
+        width: 50%
+        margin-right: 2rem
+
+.accordion
+    &__header
+    &__body
+
+.social
+    padding: .7rem
+    background: $bgColor
+    // border-radius: 0.2rem

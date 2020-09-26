@@ -1,0 +1,24 @@
+@import _colors
+@import _mixines
+
+@import logotype
+@import search
+@import sub-menu
+@import navigation
+
+.header
+    border-bottom: 1px solid rgba($blue, 0.7)
+    background: $bgColor
+    border-bottom: 1px solid $blue
+    @media screen and ( max-width: 767px )
+        box-sizing: border-box
+    &--fixed
+        top: 0
+        left: 0
+        position: fixed
+        z-index: 7
+        width: 100%
+        transform: translateY(-150%)
+    &--visible
+        transform: translateY(0)
+        transition: transform .3s

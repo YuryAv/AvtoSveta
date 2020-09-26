@@ -1,0 +1,1 @@
+"use strict";$(document).on("scroll",(function(){$(document).scrollTop()>600?$(".scroll-top").addClass("scroll-top--active"):$(".scroll-top").removeClass("scroll-top--active")})),$(".scroll-top").on("click",(function(o){o.preventDefault(),$(document).scrollTop(0),$(".scroll-top").removeClass("scroll-top--active")}));

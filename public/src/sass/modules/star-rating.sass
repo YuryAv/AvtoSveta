@@ -1,0 +1,30 @@
+@import _colors
+@import _mixines
+    
+.star-rating
+    position: absolute
+    bottom: 5px
+    left: 5px
+    display: flex 
+    flex-direction: row-reverse   
+    &__item
+        +t19
+        display: flex
+        height: 1em
+        width: 1em
+        margin-right: 0.3em
+        &--checked
+            .star-rating__path-inside
+                fill: $red
+            & ~ .star-rating__item
+                .star-rating__path-inside
+                    fill: $red
+
+
+    &__svg
+        height: 100%
+        width: 100%
+    &__path-outside
+        fill: $red
+    &__path-inside
+        fill: $bgColor

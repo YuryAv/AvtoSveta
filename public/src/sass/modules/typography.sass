@@ -1,0 +1,123 @@
+@import _colors
+@import _mixines
+
+.tag
+    +t12
+    display: inline-block
+    padding: 0.3em
+    text-transform: uppercase
+    font-weight: 600
+    // border-radius: 0.4em
+    color: $blue
+    margin-left: 0.4em
+    &--red
+        background: $red
+        color: $bgColor
+    &--blue
+        background: $blue
+        color: $bgColor
+
+
+.paragraph,
+p
+    +t16
+    color: $blue
+    margin-bottom: 1em
+
+.text-title
+    +t19
+    color: $blue
+    margin-top: 1em
+    margin-bottom: 0.5em    
+
+.section-title
+    display: inline-flex
+    +t28
+    text-transform: uppercase
+    margin-bottom: 0.8em
+    color: $blue
+    font-weight: 500
+    position: relative
+    text-decoration: underline
+    text-decoration-color: $blue
+
+.section-subtitle
+    +t19
+    padding-bottom: 0.2em
+    color: $blue 
+    
+.text
+    h1
+        +t48
+        color: $blue
+    h2
+        +t36
+        color: $blue
+    h3
+        +t28
+        color: $blue
+    h4
+        +t24
+        color: $blue
+    h5
+        +t19
+        color: $blue
+    h5
+        +t16
+        color: $blue
+    ul
+        +t16
+        padding-left: 1em
+        li
+            display: flex
+            font-size: inherit
+            align-items: flex-start
+            color: $blue
+            line-height: 1.7em
+            &::before
+                content: ''
+                font-size: inherit  
+                display: block
+                margin-top: calc((1.7em - 0.4em) / 2)
+                height: 0.4em
+                width: 0.4em
+                min-height: 0.4em
+                min-width: 0.4em
+                margin-right: 0.5em
+                border-radius: 50% 
+                background: $red
+    table
+        color: $blue
+        width: 100%
+        td
+            width: 50%
+            line-height: 3em
+            padding: 0 1em
+        tr
+            &:nth-of-type(2n - 1)
+                background: rgba(24,56,103, 0.2)
+
+.list
+    +t16
+    padding-left: 1em
+    &__item
+        display: flex
+        font-size: inherit
+        align-items: flex-start
+        color: $blue
+        line-height: 1.7em
+        &::before
+            content: ''
+            font-size: inherit  
+            display: block
+            margin-top: calc((1.7em - 0.4em) / 2)
+            height: 0.4em
+            width: 0.4em
+            min-height: 0.4em
+            min-width: 0.4em
+            margin-right: 0.5em
+            border-radius: 50% 
+            background: $red
+
+.c-bg
+    color: $bgColor
