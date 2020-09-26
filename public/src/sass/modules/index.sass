@@ -1,0 +1,45 @@
+@import _colors
+@import _mixines
+
+.index-selection
+    background: $blue
+    &__title
+        color: $bgColor
+        +t28
+        margin-bottom: 1em
+        text-align: center
+    &__subtitle
+        +t19
+        color: $bgColor
+        margin-bottom: 1em
+        text-align: center
+
+.index-text
+    &--lightbg
+        background: $lblue
+
+.index-tabs
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 10px
+    +calc-pad(10px)
+    flex-wrap: wrap
+    &__label
+        margin-bottom: 7px
+        &:last-child
+            .index-tabs__button
+                margin-right: 0
+    &__input
+        +hide
+        &:checked ~ .index-tabs__button
+            background: $blue 
+            color: $bgColor
+    &__button
+        border: 1px solid $blue
+        color: $blue
+        margin-right: 0.5em
+        cursor: pointer
+        @media screen and ( max-width: 991px )
+            width: max-content
+            

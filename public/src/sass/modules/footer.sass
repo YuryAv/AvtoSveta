@@ -1,0 +1,51 @@
+@import _mixines
+@import _colors
+
+.footer
+    background: $blue
+    &__decorline
+        width: 100%
+        height: 1px
+        padding: 0
+        border: none
+        background: rgba(255,255,255,0.7)
+    &__bottom
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__description
+        +t16
+        color: $bgColor
+
+.footer-nav
+
+
+.fn-col
+    height: 100%
+    color: $bgColor
+    &__inner
+        +t19
+        height: calc(100% - 2.3em)
+        display: flex
+        flex-direction: column
+        justify-content: space-between 
+    &__title
+        +t19
+        margin-bottom: 1em
+        font-weight: 600
+    &__list
+        padding-left: 0.5em
+    &__item
+        +t16
+        margin-bottom: 0.5em
+    &__link
+        font-weight: 200
+        font-size: 1em
+        border-bottom: 1px solid $blue
+        color: rgba(255,255,255,0.8)
+        letter-spacing: .03em
+        &:hover
+            color: $bgColor
+            text-decoration: none
+            border-bottom: 1px solid $red
+            color: $bgColor

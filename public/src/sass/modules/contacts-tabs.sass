@@ -1,0 +1,47 @@
+@import _colors
+@import _mixines
+
+.contacts-tabs
+    &__inner
+        padding: 22px 0
+    &__list
+        display: flex
+        justify-content: space-between
+    &__item
+            
+        
+        
+.c-tab
+    margin: 0 8px
+    position: relative
+    padding: 0 25px
+    @media screen and ( max-width: 1199px )
+        padding: 0 15px
+        
+    &__inner
+        +t14
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__title
+        +t16
+        font-weight: 600
+        margin-bottom: 0.7em
+        text-align: center
+    &__link
+        +t16
+        padding-left: 0.5em
+        color: $blue
+    &__button
+        opacity: 0
+        font-weight: 500
+        color: $red
+        margin-top: 0.5em
+        +t14
+        padding-left: 0.5714285714285714em
+        &:hover
+            color: $blue
+            text-decoration-color: $red
+    &:hover
+        .c-tab__button
+            opacity: 1

@@ -1,0 +1,44 @@
+@import _colors
+@import _mixines
+
+.banner
+    display: flex
+    &__image,
+    &__link,
+    &__inner,
+    &
+        min-height: 36rem
+        height: 40rem
+        @media screen and ( max-width: 1199px )
+            min-height: 31rem
+            height: 35rem
+        @media screen and ( max-width: 991px )
+            min-height: 24rem
+            height: 27rem
+        @media screen and ( max-width: 767px )
+            min-height: 19rem
+            height: 23rem
+        @media screen and ( max-width: 575px )
+            min-height: 13rem
+            height: 17rem
+    &__link
+        display: block
+        height: 100%
+    &__label
+        +t16
+        color: $bgColor
+        margin-top: 1em
+    &__inner
+        width: 40%
+        padding: 3rem
+        background: $blue
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+    &__image
+        object-fit: cover
+    &__slider
+        width: 100%
+        position: relative
+
