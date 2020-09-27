@@ -11,5 +11,6 @@ $(function () {
     @@include('modules/scroll-top.js')
     @@include('modules/filter.js')
     @@include('modules/card.js')
+    @@include('modules/card-inner-tabs.js')
     @@include('modules/slider.js')
 });
