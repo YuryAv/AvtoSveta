@@ -16,8 +16,7 @@
     position: relative
     padding: 0 25px
     @media screen and ( max-width: 1199px )
-        padding: 0 15px
-        
+        padding: 0 15px        
     &__inner
         +t14
         display: flex
@@ -32,10 +31,23 @@
         +t16
         padding-left: 0.5em
         color: $blue
+        display: flex
+        align-items: center
+        &:hover
+            color: $blue
+            text-decoration-color: $red
+        svg
+            max-height: 1em
+            max-width: 1em
+            height: 1em
+            width: auto
+            margin-right: 0.5em
+            fill: $red
     &__button
+        display: block
         opacity: 0
         font-weight: 500
-        color: $red
+        color: $blue
         margin-top: 0.5em
         +t14
         padding-left: 0.5714285714285714em
