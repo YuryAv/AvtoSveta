@@ -6,6 +6,7 @@
 
 @section('content')
 
+
     @include('modules.blog.cards')
 
     @include('modules.feedback')
