@@ -1,0 +1,31 @@
+@import _colors
+@import _mixines
+    
+.search
+    display: flex
+    align-items: center
+    @media screen and ( max-width: 1599px )
+        justify-content: flex-end
+    &__input            
+        display: none
+        border: 1px solid $blue
+        +t16
+        height: 2.5em
+        padding-left: 0.65em
+        margin-right: 0.5em
+        // border-radius: 0.35em
+        @media screen and ( max-width: 767px )            
+            display: block
+    &__button
+        +t14
+        height: 3em
+        width: 3em
+        background: $red
+        display: flex
+        justify-content: center
+        align-items: center
+        // border-radius: 0.4em
+        +a-scale
+    &__icon
+        height: 55%
+        width: 55%

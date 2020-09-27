@@ -1,0 +1,46 @@
+@import _colors
+@import _mixines
+
+.filter
+    &__label
+        display: none
+        @media screen and ( max-width: 991px )
+            display: flex
+            align-items: center
+            justify-content: space-between
+            background: $blue
+            margin-bottom: 15px
+            +t24            
+            padding: 0 1em
+    &__headline
+        font-size: inherit
+        color: $bgColor
+    &__icon
+        height: 2.2em
+        width: 2.2em
+        display: flex
+        justify-content: center
+        align-items: center
+        svg
+            height: 80%
+            width: 80%
+            fill: $bgColor
+    &__row
+        display: grid
+        grid-template-rows: auto
+        gap: 10px 0
+        @media screen and ( max-width: 991px )
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: auto
+            gap: 10px
+        @media screen and ( max-width: 425px )
+            grid-template-columns: 1fr
+            
+    &__button
+        width: 100%
+        justify-content: center
+        align-items: center
+        @media screen and ( max-width: 991px )
+            grid-column: 1 / span 2
+        @media screen and ( max-width: 425px )
+            grid-column: 1 / span 1

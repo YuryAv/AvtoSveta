@@ -1,0 +1,39 @@
+@import _colors
+@import _mixines
+
+.form
+    &__title
+        +t19
+        text-align: center
+        text-transform: uppercase
+        margin-bottom: 1em
+    &--grid-3
+        display: grid
+        max-width: 700px
+        grid-template-columns: repeat(3, 1fr)
+        gap: 1em
+        margin: 0 auto
+        @media screen and ( max-width: 767px )
+            grid-template-columns: repeat(2, 1fr)
+        @media screen and ( max-width: 425px )
+            grid-template-columns: repeat(1, 1fr)
+            max-width: 270px
+        .form__input
+            margin-right: 0em
+        .form__button
+            display: flex
+            justify-content: center
+    &__input
+        +t16
+        padding: 1em 1.5em
+        // border-radius: 0.4em
+        outline: none
+        border: none
+        margin-right: 0.5em
+        resize: none
+        &--border
+            border: 1px solid $blue
+    &__button
+        // border-radius: 0.4em
+        padding: 1em 1.5em !important
+        color: $bgColor

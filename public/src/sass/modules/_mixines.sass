@@ -1,0 +1,71 @@
+
+@mixin t()
+    font-family: 'Roboto', sans-serif
+@mixin calc-fz($param)
+    @media screen and ( max-width: 1199px )
+        font-size: $param * 0.9
+    @media screen and ( max-width: 991px )
+        font-size: $param * 0.81
+    @media screen and ( max-width: 767px )
+        font-size: $param * 0.729
+    @media screen and ( max-width: 575px )
+        font-size: $param * 0.6561
+@mixin calc-pad($param)
+    @media screen and ( max-width: 1199px )
+        padding: $param * 0.9 0
+    @media screen and ( max-width: 991px )
+        padding: $param * 0.81 0
+    @media screen and ( max-width: 767px )
+        padding: $param * 0.729 0
+    @media screen and ( max-width: 575px )
+        padding: $param * 0.6561 0
+@mixin t48()
+    +t
+    font-size: 48px
+    line-height: 1.3em
+    +calc-fz(48px)
+@mixin t36()
+    +t
+    font-size: 36px
+    line-height: 1.3em
+    +calc-fz(36px)
+@mixin t28()
+    +t
+    font-size: 28px
+    line-height: 1.3em
+    +calc-fz(28px)
+@mixin t24()
+    +t
+    font-size: 24px
+    line-height: 1.3em
+    +calc-fz(24px)
+@mixin t19()
+    +t
+    font-size: 19px
+    line-height: 1.3em
+    +calc-fz(19px)
+@mixin t16()
+    +t
+    font-size: 16px
+    line-height: 1.3em
+    +calc-fz(16px)
+@mixin t14()
+    +t
+    font-size: 14px
+    line-height: 1.3em
+    +calc-fz(14px)
+@mixin t12()
+    +t
+    font-size: 12px
+    line-height: 1.3em
+    +calc-fz(12px)
+@mixin a-scale()
+    &:active
+        transform: scale(0.97)
+@mixin hide
+    position: absolute
+    z-index: -2
+    height: 0.1px
+    width: 0.1px
+    overflow: hidden
+    opacity: 0

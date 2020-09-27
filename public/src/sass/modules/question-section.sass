@@ -1,0 +1,16 @@
+@import _colors
+@import _mixines
+
+.question-section
+    
+.question-tab-wrapper
+    padding-top: 25px
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 0 15px
+    grid-template-rows: auto
+    align-items: flex-start
+    @media screen and ( max-width: 767px )
+        grid-template-columns: repeat(1, 1fr)
+        gap: 0
+        

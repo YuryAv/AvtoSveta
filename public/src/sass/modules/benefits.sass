@@ -1,0 +1,80 @@
+@import _colors
+@import _mixines    
+    
+.benefits
+    &__row
+        @media screen and ( max-width: 575px )
+            padding-left: 2rem
+            padding-right: 2rem
+        // display: grid
+        // grid-template-columns: repeat(4, 1fr)
+        // gap: 15px
+        // @media screen and ( max-width: 991px )
+        //     grid-template-columns: repeat(3, 1fr)
+        // @media screen and ( max-width: 480px )
+        //     grid-template-columns: repeat(2, 1fr)
+        // @media screen and ( max-width: 375px )
+        //     grid-template-columns: repeat(1, 1fr)
+
+.benefits-card
+    font-size: 52px
+    border: 1px solid $blue
+    margin-top: 1em
+    position: relative
+    padding: 0.3em
+    padding-top: 1.2em
+    background: $bgColor
+    @media screen and ( max-width: 991px )
+        font-size: 39px
+    @media screen and ( max-width: 767px )
+        font-size: 29px
+    &__icon
+        border: 1px solid $blue
+        position: absolute
+        transition: background .2s, color .2s
+        background: $bgColor
+        border-radius: 50%
+        font-size: 1em
+        height: 2em
+        width: 2em
+        color: $red
+        display: flex
+        justify-content: center
+        align-items: center
+        top: 0em
+        left: 50%
+        transform: translate(-50%, -50%)
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+        svg
+            max-height: 60%
+            max-width: 60%
+            height: 60%
+            width: auto
+            path
+                transition: fill .2s
+                fill: $red !important
+    &__title
+        +t16
+        text-align: center
+        text-transform: uppercase
+        color: $blue
+        margin-bottom: 0.5em
+        min-height: 3.75em
+        &--short
+            min-height: 1.25em
+    &__text
+        text-align: center
+        +t16
+        color: $blue
+    &:hover
+        border-color: $red
+        .benefits-card__icon
+            background: $blue
+            color: $bgColor
+            svg
+                path 
+                    fill: $bgColor !important

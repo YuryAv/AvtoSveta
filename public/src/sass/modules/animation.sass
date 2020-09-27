@@ -1,0 +1,56 @@
+.a
+    &--show
+        &-before
+            opacity: 0
+            transition: opacity 0.2s ease-in, transform 0.2s ease-in
+            transform: scale(0.6)
+        &
+            transform: scale(1)
+            opacity: 1
+    &--hide
+        &-before
+            transition: opacity 0.2s ease-in, transform 0.2s ease-in
+            opacity: 1
+            transform: scale(1)
+        &
+            transform: scale(0.6)
+            opacity: 0
+    &--slideOn
+        &-before
+            transition: transform 0.2s ease-in
+            transform: scaleX(0)
+        &
+            transform: scaleX(1)
+    &--slideOff
+        &-before
+            transition: transform 0.2s ease-in
+            transform: scaleX(1)
+        &
+            transform: scaleX(0)
+    &--slideDown
+        &-before
+            transition: transform 0.2s ease-in
+            transform: translateY(-150%)
+        &
+            transform: translateY(0)
+    &--slideUp
+        &-before
+            transition: transform 0.2s ease-in
+            transform: translateY(0)
+        &
+            transform: translateY(-150%)
+
+@keyframes upDown
+    0%
+        transform: translateY(0px)
+    22.5%
+        transform: translateY(-6px)
+    70.5%
+        transform: translateY(6px) rotateY(0deg)
+    77.5%
+        transform: translateY(6px) rotateY(90deg)
+    84.5%
+        transform: translateY(6px) rotateY(0deg)
+    100%
+        transform: translateY(0px)
+        

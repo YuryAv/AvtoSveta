@@ -1,0 +1,27 @@
+@import _colors
+@import _mixines
+@import form
+
+.section-form
+    &__inner
+        max-width: 600px
+        margin: 0 auto
+    &__title
+        text-align: center
+    &__paragraph
+        text-align: center
+    &__form
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 1.5em
+        .form__textarea
+            grid-column: 1 / span 2
+            height: 10em
+            resize: none
+        .form__button
+            grid-column: 1 / span 2
+            align-self: flex-start
+            justify-self: center
+        .form__input
+            border: 1px solid $blue
+            margin-right: 0
