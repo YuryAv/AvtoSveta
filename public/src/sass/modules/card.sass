@@ -160,6 +160,27 @@
             &:nth-of-type(2n - 1)
                 background: rgba(24,56,103, 0.2)
 
+.card-inner-tabs
+    &__head
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 50px
+    &__item
+        +t16
+        padding: .6em 1em
+        text-transform: uppercase
+        text-decoration: none
+        display: block
+        border: 1px solid $blue
+        color: $blue
+        margin-right: .5em
+        &:last-child
+            margin-right: 0
+    &__body
+        border: 1px solid $blue
+        
+
 .card-slider
     display: none
     padding-top: 1px
@@ -167,6 +188,10 @@
         background: gray
         border: 1px solid $bgColor
         width: 33.3333%
+        &:first-child
+            border-left: 1px solid $blue
+        &:last-child
+            border-right: 1px solid $blue
         &:hover
             border: 1px solid $blue            
     &__image

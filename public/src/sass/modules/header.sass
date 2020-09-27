@@ -19,6 +19,34 @@
         z-index: 7
         width: 100%
         transform: translateY(-150%)
+        .search
+            display: none
     &--visible
         transform: translateY(0)
         transition: transform .3s
+    &__sidebar
+        display: flex
+        @media screen and ( max-width: 1599px )
+            flex-direction: column
+            
+    &__contacts
+        
+.h-contacts
+    margin-right: 15px
+    @media screen and ( max-width: 1599px )
+        margin-right: 0
+        margin-bottom: 15px
+    &__link
+        +t19
+        display: flex
+        align-items: center
+        &:hover
+            color: $blue
+        svg
+            font-size: 1em
+            max-width: 1em
+            max-height: 1em
+            height: 1em
+            margin-right: 0.5em
+            width: auto
+            fill: $red
