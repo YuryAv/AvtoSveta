@@ -82,7 +82,7 @@
                                 <g>
                                 </g>
                             </svg>
-                            +8 888 888 88-77</a><a class="h-contacts__link" href="">
+                            {{ setting('site.phone') }}</a><a class="h-contacts__link" href="">
                             <?xml version="1.0" encoding="iso-8859-1"?>
                             <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +127,7 @@
                                     <g>
                                     </g>
                                 </svg>
-                            kakoi-to@mail.com</a></div>
+                            {{ setting('site.email') }}</a></div>
                     <form class="search" action="">
                         <input class="search__input" type="text" />
                         <button class="search__button" type="button"><img class="search__icon lazy"

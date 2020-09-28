@@ -16,11 +16,22 @@ class CatalogController extends Controller
             $brand = $request->brand;
         }
 
+        $cars = $this->_buildQuery($request, $brand);
+        $this->_unserializeCarImages($cars);
+
         return view('catalog', [
-            'cars' => $this->_buildQuery($request, $brand),
+            'cars' => $cars,
             'brand' => $brand,
             'text' => $brand ? Brand::where('name', $brand)->first()->text : false,
         ]);
+    }
+
+    private function _unserializeCarImages($cars)
+    {
+        foreach ($cars as $car)
+        {
+            $car->images = json_decode($car->images);
+        }
     }
 
     private function _buildQuery(Request $request, $brand)

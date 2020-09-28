@@ -3,15 +3,16 @@
         <div class="card__tags">
             <span class="card__tag tag tag--blue">new</span>
         </div>
-        <img class="card__image lazy" data-src="{{ asset('storage/' . json_decode($car->images)[0]) }}" alt="..."/></a>
+        <img class="card__image lazy" data-src="{{ asset('storage/' . $car->images[0]) }}" alt="..."/></a>
     </a>
     <ul class="card-slider card__slider" style="">
+        @foreach($car->images as $image)
+            @if ($loop->iteration > 3)
+                @break
+            @endif
         <li class="card-slider__item" style="height: 92.2917px;"><img class="card-slider__image"
-                                                                      src="../img/cars/1-1.jpg" alt=""></li>
-        <li class="card-slider__item" style="height: 92.2917px;"><img class="card-slider__image" src="../img/cars/1.jpg"
-                                                                      alt=""></li>
-        <li class="card-slider__item" style="height: 92.2917px;"><img class="card-slider__image"
-                                                                      src="../img/cars/1-2.jpg" alt=""></li>
+                                                                      src="{{ asset('storage/' . $image) }}" alt=""></li>
+        @endforeach
     </ul>
     <div class="card__inner">
         <div class="card__body">
