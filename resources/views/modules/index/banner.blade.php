@@ -11,7 +11,7 @@
 
 <section class="index-video">
     <div class="container">
-        <div class="index-video--inner" data-src="{{  asset('storage/' . $video->preview) }}"><img class="index-video__image"
+        <div class="index-video--inner" data-src="{{  asset('storage/' . $video->url) }}"><img class="index-video__image"
                 src="{{ asset('storage/' . $video->preview) }}" alt="">
             <div class="index-video__filter"></div>
             <div class="index-video__filter-click"></div>
