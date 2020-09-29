@@ -21,8 +21,7 @@
         @media screen and ( max-width: 767px )
             grid-template-columns: repeat(2, 1fr)
         @media screen and ( max-width: 375px )
-            grid-template-columns: repeat(1, 1fr)
-        
+            grid-template-columns: repeat(1, 1fr)        
 
 .card    
     border-radius: 0
@@ -47,7 +46,15 @@
     &__link
         position: relative
         border: 1px solid lightgray
-        border-bottom: none
+        border-bottom: none    
+    &__tags
+        position: absolute
+        top: 5px
+        left: 0
+    &__image
+        height: 100%
+        width: 100%
+        object-fit: cover    
     &__link,
     &__image
         height: 250px
@@ -64,14 +71,21 @@
         @media screen and ( max-width: 575px )
             height: 150px
             min-height: 150px
-    &__tags
-        position: absolute
-        top: 5px
-        left: 0
-    &__image
-        height: 100%
-        width: 100%
-        object-fit: cover
+        &--short
+            height: 200px
+            min-height: 200px
+            @media screen and ( max-width: 1199px )
+                height: 170px
+                min-height: 170px
+            @media screen and ( max-width: 991px )
+                height: 160px
+                min-height: 160px
+            @media screen and ( max-width: 767px )
+                height: 150px
+                min-height: 150px
+            @media screen and ( max-width: 575px )
+                height: 120px
+                min-height: 120px
     &__title
         font-size: 1em
         margin-bottom: 0.6em
@@ -164,9 +178,10 @@
     &__head
         display: flex
         align-items: center
-        justify-content: center
+        justify-content: flex-start
         margin-top: 50px
-    &__item
+        margin-bottom: -1px
+    &__head-i
         +t16
         padding: .6em 1em
         text-transform: uppercase
@@ -175,10 +190,16 @@
         border: 1px solid $blue
         color: $blue
         margin-right: .5em
+        position: relative
+        z-index: 2
+        cursor: pointer
+        &--active
+            border-bottom: 1px solid $bgColor
         &:last-child
             margin-right: 0
     &__body
         border: 1px solid $blue
+        padding: 25px   
         
 
 .card-slider
