@@ -23,6 +23,11 @@
         .form__button
             display: flex
             justify-content: center
+            grid-column: 3 / span 1
+            @media screen and ( max-width: 767px )
+                grid-column: 2 / span 1
+            @media screen and ( max-width: 425px )
+                grid-column: 1 / span 1
     &__input
         +t16
         padding: 1em 1.5em

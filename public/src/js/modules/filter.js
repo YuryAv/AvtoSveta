@@ -8,3 +8,14 @@ if ($(window).width() < 992) {
         $(this).next('.filter__row').slideToggle(300);
     })
 }
+
+$.each($('.filter-banner__item'), function (indexInArray, valueOfElement) {
+    if ($(window).width() > 991) {
+        const size = $(valueOfElement).width();
+
+        $(valueOfElement).height(size)
+        $(valueOfElement).width(size)
+    } else {
+        $(valueOfElement).hide();
+    }
+});

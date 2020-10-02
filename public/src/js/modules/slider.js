@@ -49,60 +49,55 @@ $('.page-slider__bottom').slick({
             }
         },
         {
-            breakpoint: 486,
-            settings: {
-            slidesToShow: 2
-            }
-        }
-    ]
-})
-
-$('.similar-row__inner').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: false,
-    nextArrow: nextArrowBig,
-    prevArrow: prevArrowBig
-})
-
-let sectionSliders = ['.auctions-slider__inner', '.benefits__row', '.top-orders__inner'];
-
-$('.contacts-tabs__list').slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: false,
-    nextArrow: nextArrowSmall,
-    prevArrow: prevArrowSmall,
-    adaptiveHeight: true,
-    responsive: [
-        {
-            breakpoint: 1200,
-            settings: {
-            slidesToShow: 4
-            }
-        },
-        {
-            breakpoint: 992,
-            settings: {
-            slidesToShow: 3
-            }
-        },
-        {
             breakpoint: 768,
             settings: {
             slidesToShow: 2
             }
-        },
-        {
-            breakpoint: 486,
-            settings: {
-            slidesToShow: 1
-            }
         }
-    ]
+    ]    
 })
+
+let sectionSliders = ['.auctions-slider__inner', '.benefits__row', '.top-orders__inner', '.vr-row', '.similar-row__inner'];
+
+if ($('.contacts-tabs__item').length > 5) {
+    $('.contacts-tabs__list').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        nextArrow: nextArrowSmall,
+        prevArrow: prevArrowSmall,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 486,
+                settings: {
+                slidesToShow: 1
+                }
+            }
+        ]
+    })
+}
+
+
 
 $.each(sectionSliders, function (indexInArray, valueOfElement) { 
     $(valueOfElement).slick({

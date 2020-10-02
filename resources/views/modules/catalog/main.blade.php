@@ -7,20 +7,32 @@
                     <div class="filter">
                         <div class="filter__label">
                             <p class="filter__headline">Открыть фильтр</p>
-                            <div class="filter__icon"><svg id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g>
-                                        <path d="m432.733 112.467h-228.461c-6.281-18.655-23.926-32.133-44.672-32.133s-38.391 13.478-44.672 32.133h-35.661c-8.284 0-15 6.716-15 15s6.716 15 15 15h35.662c6.281 18.655 23.926 32.133 44.672 32.133s38.391-13.478 44.672-32.133h228.461c8.284 0 15-6.716 15-15s-6.716-15-15.001-15zm-273.133 32.133c-9.447 0-17.133-7.686-17.133-17.133s7.686-17.133 17.133-17.133 17.133 7.686 17.133 17.133-7.686 17.133-17.133 17.133z"/><path d="m432.733 241h-35.662c-6.281-18.655-23.927-32.133-44.672-32.133s-38.39 13.478-44.671 32.133h-228.461c-8.284 0-15 6.716-15 15s6.716 15 15 15h228.461c6.281 18.655 23.927 32.133 44.672 32.133s38.391-13.478 44.672-32.133h35.662c8.284 0 15-6.716 15-15s-6.716-15-15.001-15zm-80.333 32.133c-9.447 0-17.133-7.686-17.133-17.133s7.686-17.133 17.133-17.133 17.133 7.686 17.133 17.133-7.686 17.133-17.133 17.133z"/><path d="m432.733 369.533h-164.194c-6.281-18.655-23.926-32.133-44.672-32.133s-38.391 13.478-44.672 32.133h-99.928c-8.284 0-15 6.716-15 15s6.716 15 15 15h99.928c6.281 18.655 23.926 32.133 44.672 32.133s38.391-13.478 44.672-32.133h164.195c8.284 0 15-6.716 15-15s-6.716-15-15.001-15zm-208.866 32.134c-9.447 0-17.133-7.686-17.133-17.133s7.686-17.133 17.133-17.133 17.133 7.685 17.133 17.132-7.686 17.134-17.133 17.134z"/></g></svg>
+                            <div class="filter__icon"><svg id="Capa_1" enable-background="new 0 0 512 512" height="512"
+                                    viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path
+                                            d="m432.733 112.467h-228.461c-6.281-18.655-23.926-32.133-44.672-32.133s-38.391 13.478-44.672 32.133h-35.661c-8.284 0-15 6.716-15 15s6.716 15 15 15h35.662c6.281 18.655 23.926 32.133 44.672 32.133s38.391-13.478 44.672-32.133h228.461c8.284 0 15-6.716 15-15s-6.716-15-15.001-15zm-273.133 32.133c-9.447 0-17.133-7.686-17.133-17.133s7.686-17.133 17.133-17.133 17.133 7.686 17.133 17.133-7.686 17.133-17.133 17.133z" />
+                                        <path
+                                            d="m432.733 241h-35.662c-6.281-18.655-23.927-32.133-44.672-32.133s-38.39 13.478-44.671 32.133h-228.461c-8.284 0-15 6.716-15 15s6.716 15 15 15h228.461c6.281 18.655 23.927 32.133 44.672 32.133s38.391-13.478 44.672-32.133h35.662c8.284 0 15-6.716 15-15s-6.716-15-15.001-15zm-80.333 32.133c-9.447 0-17.133-7.686-17.133-17.133s7.686-17.133 17.133-17.133 17.133 7.686 17.133 17.133-7.686 17.133-17.133 17.133z" />
+                                        <path
+                                            d="m432.733 369.533h-164.194c-6.281-18.655-23.926-32.133-44.672-32.133s-38.391 13.478-44.672 32.133h-99.928c-8.284 0-15 6.716-15 15s6.716 15 15 15h99.928c6.281 18.655 23.926 32.133 44.672 32.133s38.391-13.478 44.672-32.133h164.195c8.284 0 15-6.716 15-15s-6.716-15-15.001-15zm-208.866 32.134c-9.447 0-17.133-7.686-17.133-17.133s7.686-17.133 17.133-17.133 17.133 7.685 17.133 17.132-7.686 17.134-17.133 17.134z" />
+                                    </g>
+                                </svg>
                             </div>
                         </div>
                         <form class="filter__row" action="{{ route('catalog', ['brand' => $brand]) }}">
                             <div class="select-group">
                                 <div class="select-group__inner">
                                     <p class="select-group__title">Производитель</p>
-                                    <div class="select-group__icon"><svg class="accordion__arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                                         viewBox="0 0 512.011 512.011" style="enable-background:new 0 0 512.011 512.011;" xml:space="preserve">
-		<path d="M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0
-			s-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.462,0,10.923-2.091,15.083-6.251l234.667-234.667
-			C514.096,145.416,514.096,131.933,505.755,123.592z"/>
-</svg>
+                                    <div class="select-group__icon"><svg class="accordion__arrow" version="1.1"
+                                            id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 512.011 512.011"
+                                            style="enable-background:new 0 0 512.011 512.011;" xml:space="preserve">
+                                            <path d="M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0
+                                                        s-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.462,0,10.923-2.091,15.083-6.251l234.667-234.667
+                                                        C514.096,145.416,514.096,131.933,505.755,123.592z" />
+                                        </svg>
 
                                     </div>
                                 </div>
@@ -28,7 +40,8 @@
                                     @foreach($brands as $brand)
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="radio" name="brand" value="{{ $brand->name }}"/>
+                                            <input class="select-group__input" type="radio" name="brand"
+                                                value="{{ $brand->name }}" />
                                             <p class="select-group__text">{{ $brand->name }}</p>
                                         </label>
                                     </li>
@@ -41,68 +54,80 @@
 
                             <div class="select-group">
                                 <div class="select-group__inner">
-                                    <p class="select-group__title">Кузов                                         </p>
-                                    <div class="select-group__icon"><svg class="accordion__arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                                         viewBox="0 0 512.011 512.011" style="enable-background:new 0 0 512.011 512.011;" xml:space="preserve">
-		<path d="M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0
-			s-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.462,0,10.923-2.091,15.083-6.251l234.667-234.667
-			C514.096,145.416,514.096,131.933,505.755,123.592z"/>
-</svg>
+                                    <p class="select-group__title">Кузов </p>
+                                    <div class="select-group__icon"><svg class="accordion__arrow" version="1.1"
+                                            id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 512.011 512.011"
+                                            style="enable-background:new 0 0 512.011 512.011;" xml:space="preserve">
+                                            <path d="M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0
+                                                s-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.462,0,10.923-2.091,15.083-6.251l234.667-234.667
+                                                C514.096,145.416,514.096,131.933,505.755,123.592z" />
+                                        </svg>
 
                                     </div>
                                 </div>
                                 <ul class="select-group__list" style="display: none">
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="body[]" value="седан"/>
+                                            <input class="select-group__input" type="checkbox" name="body[]"
+                                                value="седан" />
                                             <p class="select-group__text">Седан</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="body[]" value="хэтчбек"/>
+                                            <input class="select-group__input" type="checkbox" name="body[]"
+                                                value="хэтчбек" />
                                             <p class="select-group__text">Хэтчбек</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="body[]" value="минивен"/>
+                                            <input class="select-group__input" type="checkbox" name="body[]"
+                                                value="минивен" />
                                             <p class="select-group__text">Минивен</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="body[]" value="спорткар"/>
+                                            <input class="select-group__input" type="checkbox" name="body[]"
+                                                value="спорткар" />
                                             <p class="select-group__text">Спорткар</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="body[]" value="купе"/>
+                                            <input class="select-group__input" type="checkbox" name="body[]"
+                                                value="купе" />
                                             <p class="select-group__text">Купе</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="body[]" value="кабриолет"/>
+                                            <input class="select-group__input" type="checkbox" name="body[]"
+                                                value="кабриолет" />
                                             <p class="select-group__text">Кабриолет</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="body[]" value="кроссовер"/>
+                                            <input class="select-group__input" type="checkbox" name="body[]"
+                                                value="кроссовер" />
                                             <p class="select-group__text">Кроссовер</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="body[]" value="пикап"/>
+                                            <input class="select-group__input" type="checkbox" name="body[]"
+                                                value="пикап" />
                                             <p class="select-group__text">Пикап</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="body[]" value="универсал"/>
+                                            <input class="select-group__input" type="checkbox" name="body[]"
+                                                value="универсал" />
                                             <p class="select-group__text">Универсал</p>
                                         </label>
                                     </li>
@@ -111,43 +136,51 @@
                             <div class="select-group">
                                 <div class="select-group__inner">
                                     <p class="select-group__title">Двигатель</p>
-                                    <div class="select-group__icon"><svg class="accordion__arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                                         viewBox="0 0 512.011 512.011" style="enable-background:new 0 0 512.011 512.011;" xml:space="preserve">
-		<path d="M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0
-			s-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.462,0,10.923-2.091,15.083-6.251l234.667-234.667
-			C514.096,145.416,514.096,131.933,505.755,123.592z"/>
-</svg>
+                                    <div class="select-group__icon"><svg class="accordion__arrow" version="1.1"
+                                            id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 512.011 512.011"
+                                            style="enable-background:new 0 0 512.011 512.011;" xml:space="preserve">
+                                            <path d="M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0
+                                        s-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.462,0,10.923-2.091,15.083-6.251l234.667-234.667
+                                        C514.096,145.416,514.096,131.933,505.755,123.592z" />
+                                        </svg>
 
                                     </div>
                                 </div>
                                 <ul class="select-group__list" style="display: none">
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="fuel[]" value="Бензин"/>
+                                            <input class="select-group__input" type="checkbox" name="fuel[]"
+                                                value="Бензин" />
                                             <p class="select-group__text">Бензин</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="fuel[]" value="Газ"/>
+                                            <input class="select-group__input" type="checkbox" name="fuel[]"
+                                                value="Газ" />
                                             <p class="select-group__text">Газ</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="fuel[]" value="Гибрид"/>
+                                            <input class="select-group__input" type="checkbox" name="fuel[]"
+                                                value="Гибрид" />
                                             <p class="select-group__text">Гибрид</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="fuel[]" value="Дизель"/>
+                                            <input class="select-group__input" type="checkbox" name="fuel[]"
+                                                value="Дизель" />
                                             <p class="select-group__text">Дизель</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="fuel[]" value="Электро"/>
+                                            <input class="select-group__input" type="checkbox" name="fuel[]"
+                                                value="Электро" />
                                             <p class="select-group__text">Электро</p>
                                         </label>
                                     </li>
@@ -156,25 +189,30 @@
                             <div class="select-group">
                                 <div class="select-group__inner">
                                     <p class="select-group__title">Коробка</p>
-                                    <div class="select-group__icon"><svg class="accordion__arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                                         viewBox="0 0 512.011 512.011" style="enable-background:new 0 0 512.011 512.011;" xml:space="preserve">
-		<path d="M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0
+                                    <div class="select-group__icon"><svg class="accordion__arrow" version="1.1"
+                                            id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 512.011 512.011"
+                                            style="enable-background:new 0 0 512.011 512.011;" xml:space="preserve">
+                                            <path d="M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0
 			s-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.462,0,10.923-2.091,15.083-6.251l234.667-234.667
-			C514.096,145.416,514.096,131.933,505.755,123.592z"/>
-</svg>
+			C514.096,145.416,514.096,131.933,505.755,123.592z" />
+                                        </svg>
 
                                     </div>
                                 </div>
                                 <ul class="select-group__list" style="display: none">
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="transmission[]" value="Автомат"/>
+                                            <input class="select-group__input" type="checkbox" name="transmission[]"
+                                                value="Автомат" />
                                             <p class="select-group__text">Автомат</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="transmission[]" value="Механика"/>
+                                            <input class="select-group__input" type="checkbox" name="transmission[]"
+                                                value="Механика" />
                                             <p class="select-group__text">Механика</p>
                                         </label>
                                     </li>
@@ -183,31 +221,37 @@
                             <div class="select-group">
                                 <div class="select-group__inner">
                                     <p class="select-group__title">Привод</p>
-                                    <div class="select-group__icon"><svg class="accordion__arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                                         viewBox="0 0 512.011 512.011" style="enable-background:new 0 0 512.011 512.011;" xml:space="preserve">
-		<path d="M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0
+                                    <div class="select-group__icon"><svg class="accordion__arrow" version="1.1"
+                                            id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 512.011 512.011"
+                                            style="enable-background:new 0 0 512.011 512.011;" xml:space="preserve">
+                                            <path d="M505.755,123.592c-8.341-8.341-21.824-8.341-30.165,0L256.005,343.176L36.421,123.592c-8.341-8.341-21.824-8.341-30.165,0
 			s-8.341,21.824,0,30.165l234.667,234.667c4.16,4.16,9.621,6.251,15.083,6.251c5.462,0,10.923-2.091,15.083-6.251l234.667-234.667
-			C514.096,145.416,514.096,131.933,505.755,123.592z"/>
-</svg>
+			C514.096,145.416,514.096,131.933,505.755,123.592z" />
+                                        </svg>
 
                                     </div>
                                 </div>
                                 <ul class="select-group__list" style="display: none">
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="gear[]" value="Передний"/>
+                                            <input class="select-group__input" type="checkbox" name="gear[]"
+                                                value="Передний" />
                                             <p class="select-group__text">Передний</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="gear[]" value="Задний"/>
+                                            <input class="select-group__input" type="checkbox" name="gear[]"
+                                                value="Задний" />
                                             <p class="select-group__text">Задний</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
-                                            <input class="select-group__input" type="checkbox" name="gear[]" value="Полный"/>
+                                            <input class="select-group__input" type="checkbox" name="gear[]"
+                                                value="Полный" />
                                             <p class="select-group__text">Полный</p>
                                         </label>
                                     </li>
@@ -217,10 +261,12 @@
                                 <p class="select-group__title">Год</p>
                                 <div class="input-group">
                                     <label class="input-group__label">
-                                        <input class="input-group__input" type="text" data-val="number" name="year[from]" placeholder="От"/>
+                                        <input class="input-group__input" type="text" data-val="number"
+                                            name="year[from]" placeholder="От" />
                                     </label>
                                     <label class="input-group__label">
-                                        <input class="input-group__input" type="text" data-val="number" name="year[to]" placeholder="До"/>
+                                        <input class="input-group__input" type="text" data-val="number" name="year[to]"
+                                            placeholder="До" />
                                     </label>
                                 </div>
                             </div>
@@ -228,10 +274,12 @@
                                 <p class="select-group__title">Цена </p>
                                 <div class="input-group">
                                     <label class="input-group__label">
-                                        <input class="input-group__input" type="text" data-val="number" name="price[from]" placeholder="От"/>
+                                        <input class="input-group__input" type="text" data-val="number"
+                                            name="price[from]" placeholder="От" />
                                     </label>
                                     <label class="input-group__label">
-                                        <input class="input-group__input" type="text" data-val="number" name="price[to]" placeholder="До"/>
+                                        <input class="input-group__input" type="text" data-val="number" name="price[to]"
+                                            placeholder="До" />
                                     </label>
                                 </div>
                             </div>
@@ -239,19 +287,24 @@
                         </form>
                     </div>
                 </aside>
+                <div class="filter-banner">
+                    <a class="filter-banner__item" href=""><img src="" alt="" /></a>
+                    <a class="filter-banner__item" href=""><img src="" alt="" /></a>
+                    <a class="filter-banner__item" href=""><img src="" alt="" /></a>
+                </div>
             </div>
             <div class="col-12 col-lg-9">
                 <section class="content">
                     <div class="card-wrapper card-wrapper--short">
                         @foreach($cars as $car)
-                            @include('modules.catalog.card')
+                        @include('modules.catalog.card')
                         @endforeach
                     </div>
                     <br>
                     {{ $cars->links() }}
                     <br>
                     @if($text)
-                        {!! $text !!}
+                    {!! $text !!}
                     @endif
                 </section>
             </div>

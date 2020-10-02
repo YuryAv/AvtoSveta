@@ -3,24 +3,58 @@
 
 .index-video
     padding-top: 65px
-    &--inner,
-    &--inner video,
+    &__title
+        +t48
+        font-weight: 500
+        color: $blue
+        margin-bottom: 0.2em
+    &__subtitle
+        +t36
+        margin-bottom: 0.3em
+        color: $blue
+    &__subtitle
+        +t28
+        margin-bottom: 0.5em
+        color: $blue
+    &__container        
+        display: flex
+        justify-content: space-between
+        @media screen and ( max-width: 525px )
+            flex-direction: column
+    &__left
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+    &__left
+        max-width: calc(40% - 10px)
+        width: calc(40% - 10px)
+    &__right
+        max-width: calc(60% - 10px)
+        width: calc(60% - 10px)
+    &__left,
+    &__right
+        @media screen and ( max-width: 525px )
+            max-width: 100%
+            width: 100%
+    &__right,
+    &__right video,
     &__image
-        height: 800px
+        height: 400px
         @media screen and ( max-width: 1199px )
-            height: 550px
-        @media screen and ( max-width: 991px )
-            height: 450px
-        @media screen and ( max-width: 767px )
             height: 350px
+        @media screen and ( max-width: 991px )
+            height: 300px
+        @media screen and ( max-width: 767px )
+            height: 250px
         @media screen and ( max-width: 575px )
-            height: 270px
-    &--inner
+            height: 220px
+    &__right
         max-width: 100%
         position: relative
         video
+            max-width: 100%
             width: 100%
-            max-height: 100%
+            height: auto
     &__image
         position: absolute
         top: 0
@@ -42,18 +76,7 @@
         left: 50%
         transform: translate(-50%, -50%)
         +t19
-        height: 4em
-        width: 4em
-        background: $red
         z-index: 3
-        border: none
-        display: flex
-        justify-content: center
-        align-items: center
-        svg
-            height: 50%
-            width: 50%
-            fill: $bgColor
     &__filter-click
         position: absolute
         top: 0

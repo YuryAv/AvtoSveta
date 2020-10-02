@@ -1,3 +1,5 @@
+// .card-inner-tabs__body-i
+
 $.each($('.card-inner-tabs__head-i'), function (indexInArray, valueOfElement) { 
     $(valueOfElement).on('click', function(){
         $('.card-inner-tabs__head-i--active').removeClass('card-inner-tabs__head-i--active');
