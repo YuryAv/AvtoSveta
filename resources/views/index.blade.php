@@ -4,11 +4,15 @@
 
     @include('modules.index.popup')
 
+    @include('modules.index.contacts-tabs')
+
     @include('modules.index.index-form')
 
     @include('modules.index.banner')
 
     @include('modules.index.cards')
+
+    @include('modules.index.video-reviews')
 
     @include('modules.index.benefits')
 

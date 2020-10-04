@@ -6,10 +6,12 @@ use App\Auction;
 use App\Banner;
 use App\Benefit;
 use App\ContactsTab;
+use App\Form;
 use App\IndexText;
 use App\Question;
 use App\Review;
 use App\Video;
+use App\VideoReview;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -25,6 +27,8 @@ class IndexController extends Controller
             'texts' => IndexText::all(),
             'tabs' => ContactsTab::all(),
             'video' => Video::first(),
+            'videoReviews' => VideoReview::all(),
+            'forms' => Form::all(),
         ]);
     }
 }

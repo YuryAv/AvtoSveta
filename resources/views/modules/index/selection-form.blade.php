@@ -1,6 +1,6 @@
 <section class="index-selection section">
     <div class="container">
-        <h3 class="index-selection__title">Заполните форму и наши специалисты сделают подборку специально для вас!</h3>
+        <h3 class="index-selection__title">{{ $forms[1]->title }}</h3>
         <form class="form index-selection__form form--grid-3" action="{{ route('feedback') }}" method="post">
             @csrf
             <input type="text" name="parameters" value="1" hidden>
