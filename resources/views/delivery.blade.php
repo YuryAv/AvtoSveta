@@ -1,7 +1,5 @@
 @extends('layouts.layout')
 
-@section('css', asset('css/page-delivery.css'))
-
 @section('title', 'Доставка')
 
 @section('content')

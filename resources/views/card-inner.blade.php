@@ -1,7 +1,5 @@
 @extends('layouts.layout')
 
-@section('css', asset('css/page-card-inner.css'))
-
 @section('title', 'Авто')
 
 @section('content')

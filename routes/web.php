@@ -21,6 +21,8 @@ Route::get('/clear-cache', function() {
 
 Route::get('/', [\App\Http\Controllers\IndexController::class, 'index']);
 
+Route::get('/content/{slug?}', [\App\Http\Controllers\PageController::class, 'index']);
+
 Route::get('/news', [\App\Http\Controllers\NewsController::class, 'index']);
 Route::get('/news/{id?}', [\App\Http\Controllers\NewsController::class, 'showNews']);
 
@@ -36,7 +38,7 @@ Route::get('/repairs', [\App\Http\Controllers\RepairsController::class, 'index']
 
 Route::get('/track', [\App\Http\Controllers\TrackController::class, 'index']);
 
-Route::get('/cards/1', [\App\Http\Controllers\CardController::class, 'index']);
+Route::get('/cars/{id}-{name?}', [\App\Http\Controllers\CardController::class, 'index']);
 
 Route::post('/feedback', [\App\Http\Controllers\FeedbackController::class, 'index'])->name('feedback');
 

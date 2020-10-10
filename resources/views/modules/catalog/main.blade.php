@@ -41,7 +41,7 @@
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="radio" name="brand"
-                                                value="{{ $brand->name }}" />
+                                                value="{{ $brand->name }}" @if(request()->brand == $brand->name) checked @endif/>
                                             <p class="select-group__text">{{ $brand->name }}</p>
                                         </label>
                                     </li>
@@ -71,63 +71,63 @@
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="body[]"
-                                                value="седан" />
+                                                value="седан" @if(collect(request()->body)->contains('седан')) checked @endif/>
                                             <p class="select-group__text">Седан</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="body[]"
-                                                value="хэтчбек" />
+                                                value="хэтчбек" @if(collect(request()->body)->contains('хэтчбек')) checked @endif/>
                                             <p class="select-group__text">Хэтчбек</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="body[]"
-                                                value="минивен" />
+                                                value="минивен" @if(collect(request()->body)->contains('минивен')) checked @endif/>
                                             <p class="select-group__text">Минивен</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="body[]"
-                                                value="спорткар" />
+                                                value="спорткар" @if(collect(request()->body)->contains('спорткар')) checked @endif/>
                                             <p class="select-group__text">Спорткар</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="body[]"
-                                                value="купе" />
+                                                value="купе" @if(collect(request()->body)->contains('купе')) checked @endif/>
                                             <p class="select-group__text">Купе</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="body[]"
-                                                value="кабриолет" />
+                                                value="кабриолет" @if(collect(request()->body)->contains('кабриолет')) checked @endif/>
                                             <p class="select-group__text">Кабриолет</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="body[]"
-                                                value="кроссовер" />
+                                                value="кроссовер" @if(collect(request()->body)->contains('кроссовер')) checked @endif/>
                                             <p class="select-group__text">Кроссовер</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="body[]"
-                                                value="пикап" />
+                                                value="пикап" @if(collect(request()->body)->contains('пикап')) checked @endif/>
                                             <p class="select-group__text">Пикап</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="body[]"
-                                                value="универсал" />
+                                                value="универсал" @if(collect(request()->body)->contains('универсал')) checked @endif/>
                                             <p class="select-group__text">Универсал</p>
                                         </label>
                                     </li>
@@ -152,35 +152,35 @@
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="fuel[]"
-                                                value="Бензин" />
+                                                value="Бензин" @if(collect(request()->fuel)->contains('Бензин')) checked @endif/>
                                             <p class="select-group__text">Бензин</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="fuel[]"
-                                                value="Газ" />
+                                                value="Газ" @if(collect(request()->fuel)->contains('Газ')) checked @endif/>
                                             <p class="select-group__text">Газ</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="fuel[]"
-                                                value="Гибрид" />
+                                                value="Гибрид" @if(collect(request()->fuel)->contains('Гибрид')) checked @endif/>
                                             <p class="select-group__text">Гибрид</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="fuel[]"
-                                                value="Дизель" />
+                                                value="Дизель" @if(collect(request()->fuel)->contains('Дизель')) checked @endif/>
                                             <p class="select-group__text">Дизель</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="fuel[]"
-                                                value="Электро" />
+                                                value="Электро" @if(collect(request()->fuel)->contains('Электро')) checked @endif/>
                                             <p class="select-group__text">Электро</p>
                                         </label>
                                     </li>
@@ -205,14 +205,14 @@
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="transmission[]"
-                                                value="Автомат" />
+                                                value="Автомат" @if(collect(request()->transmission)->contains('Автомат')) checked @endif/>
                                             <p class="select-group__text">Автомат</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="transmission[]"
-                                                value="Механика" />
+                                                value="Механика" @if(collect(request()->transmission)->contains('Механика')) checked @endif/>
                                             <p class="select-group__text">Механика</p>
                                         </label>
                                     </li>
@@ -237,21 +237,21 @@
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="gear[]"
-                                                value="Передний" />
+                                                value="Передний" @if(collect(request()->gear)->contains('Передний')) checked @endif/>
                                             <p class="select-group__text">Передний</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="gear[]"
-                                                value="Задний" />
+                                                value="Задний" @if(collect(request()->gear)->contains('Задний')) checked @endif/>
                                             <p class="select-group__text">Задний</p>
                                         </label>
                                     </li>
                                     <li class="select-group__item">
                                         <label class="select-group__label">
                                             <input class="select-group__input" type="checkbox" name="gear[]"
-                                                value="Полный" />
+                                                value="Полный" @if(collect(request()->gear)->contains('Полный')) checked @endif/>
                                             <p class="select-group__text">Полный</p>
                                         </label>
                                     </li>
@@ -262,11 +262,11 @@
                                 <div class="input-group">
                                     <label class="input-group__label">
                                         <input class="input-group__input" type="text" data-val="number"
-                                            name="year[from]" placeholder="От" />
+                                            name="year[from]" placeholder="От" value="{{ request()->year['from'] }}"/>
                                     </label>
                                     <label class="input-group__label">
                                         <input class="input-group__input" type="text" data-val="number" name="year[to]"
-                                            placeholder="До" />
+                                            placeholder="До" value="{{ request()->year['to'] }}"/>
                                     </label>
                                 </div>
                             </div>
@@ -275,11 +275,11 @@
                                 <div class="input-group">
                                     <label class="input-group__label">
                                         <input class="input-group__input" type="text" data-val="number"
-                                            name="price[from]" placeholder="От" />
+                                            name="price[from]" placeholder="От" value="{{ request()->price['from'] }}"/>
                                     </label>
                                     <label class="input-group__label">
                                         <input class="input-group__input" type="text" data-val="number" name="price[to]"
-                                            placeholder="До" />
+                                            placeholder="До" value="{{ request()->price['to'] }}"/>
                                     </label>
                                 </div>
                             </div>
@@ -288,9 +288,9 @@
                     </div>
                 </aside>
                 <div class="filter-banner">
-                    <a class="filter-banner__item" href=""><img src="" alt="" /></a>
-                    <a class="filter-banner__item" href=""><img src="" alt="" /></a>
-                    <a class="filter-banner__item" href=""><img src="" alt="" /></a>
+                    @foreach($banners as $banner)
+                    <a class="filter-banner__item" href="{{ $banner->url }}"><img src="{{ asset("storage/$banner->image") }}" alt="{{ $banner->name }}" /></a>
+                    @endforeach
                 </div>
             </div>
             <div class="col-12 col-lg-9">

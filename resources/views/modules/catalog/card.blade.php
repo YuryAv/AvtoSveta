@@ -1,5 +1,5 @@
 <div class="card">
-    <a class="card__link" href="card-inner.html">
+    <a class="card__link" href="{{ url("cars/$car->id-" . \Illuminate\Support\Str::slug($car->name)) }}">
         <div class="card__tags">
             <span class="card__tag tag tag--blue">new</span>
         </div>

@@ -12,7 +12,7 @@
     <script src="{{ asset('assets/js/jquery.lazy.min.js') }}"></script>
     <script src="{{ asset('assets/js/slick.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
-    <link rel="stylesheet" href="@yield('css', asset('css/page-index.css'))"/>
+    <link rel="stylesheet" href="@yield('css', asset('css/all-styles.css'))"/>
     @yield('add-sources', '')
     <title>@yield('title', 'Index')</title>
 </head>

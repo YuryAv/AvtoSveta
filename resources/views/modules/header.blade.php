@@ -5,7 +5,7 @@
                     href="/"><img class="logotype__image lazy" data-src="{{ asset('storage/'.setting('site.logo')) }}"
                         alt="logotype" /></a>
                 <div class="navigation__inner">
-                    {!! menu('main', 'modules.navigation') !!}
+                    {!! menu('Главное меню сайта', 'modules.navigation') !!}
                 </div>
                 <div class="header__sidebar">
                     <div class="header__contacts h-contacts"><a class="h-contacts__link" href="">
