@@ -1,6 +1,6 @@
 <section class="section">
     <div class="container">
-        <h2 class="section-title">{{ $seo->h1 }}</h2>
+        <h2 class="section-title">{{ $seo->h1 ?? 'Новости' }}</h2>
         <div class="card-wrapper">
             @foreach($news as $new)
             <div class="card card--news"><a class="card__link" href="/news/{{ $new->id }}"><img class="card__image lazy" data-src="{{ asset("storage/$new->image") }}" alt="{{ $new->title }}"/></a>

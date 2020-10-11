@@ -1,6 +1,6 @@
 <section class="section">
     <div class="container">
-        <h2 class="section-title">{{ $seo->h1 }}</h2>
+        <h2 class="section-title">{{ $seo->h1  ?? 'Блог' }}</h2>
         <div class="discount-wrapper row">
             @foreach($cards as $card)
             <div class="col-lg-3 col-md-4 col-sm-6 col-6">
