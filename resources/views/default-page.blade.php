@@ -1,7 +1,5 @@
 @extends('layouts.layout')
 
-@section('title', $page->title)
-
 @section('content')
 
     <section class="section">

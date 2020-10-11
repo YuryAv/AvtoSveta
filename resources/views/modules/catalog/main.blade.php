@@ -1,6 +1,6 @@
 <main class="section">
     <div class="container">
-        <h2 class="section-title">Каталог</h2>
+        <h2 class="section-title">{{ $seo->h1 }}</h2>
         <div class="row">
             <div class="col-12 col-lg-3 mb-3 mb-lg-0">
                 <aside class="sidebar">

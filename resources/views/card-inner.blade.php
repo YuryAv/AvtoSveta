@@ -1,7 +1,5 @@
 @extends('layouts.layout')
 
-@section('title', 'Авто')
-
 @section('content')
 
     @include('modules.cards.popup')

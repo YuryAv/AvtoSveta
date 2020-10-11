@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Brand;
+use App\SeoTitle;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Storage;
@@ -28,8 +29,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $seo = SeoTitle::where('url', $_SERVER['REQUEST_URI'] ?? '')->first();
+
         Paginator::useBootstrap();
 
+        View::share('seo', $seo);
         View::share('brands', Brand::all());
 
         Blade::directive('svg', function ($expression)

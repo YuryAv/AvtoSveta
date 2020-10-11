@@ -12,10 +12,9 @@
 <section class="index-video">
     <div class="container index-video__container">
         <div class="index-video__left">
-            <h2 class="index-video__title">Lorem ipsum dolor sit amet.</h2>
-            <h3 class="index-video__subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
-            <p class="index-video__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, laboriosam
-                eaque. Incidunt voluptate illo quia non! Quisquam labore sint sapiente!!</p>
+            <h2 class="index-video__title">{{ $video->name }}</h2>
+            <h3 class="index-video__subtitle">{{ $video->subtitle }}</h3>
+            <p class="index-video__text">{{ $video->text }}</p>
         </div>
         <div class="index-video__right" data-src="{{  asset('storage/' . $video->url) }}"><img
                 class="index-video__image" src="{{ asset('storage/' . $video->preview) }}" alt="" />

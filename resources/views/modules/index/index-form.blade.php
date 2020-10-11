@@ -1,6 +1,6 @@
 <section class="index-form section section--small">
     <div class="container">
-        <h1 class="index-form__title">Авто из США
+        <h1 class="index-form__title">{{ $seo->h1 }}
             <h2 class="index-form__subtitle">{{ $forms[0]->title }}</h2>
             <form class="form index-form__form" action="{{ route('feedback') }}" method="post">
                 @csrf
