@@ -6,6 +6,7 @@ use App\Brand;
 use App\SeoTitle;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -31,10 +32,16 @@ class AppServiceProvider extends ServiceProvider
     {
         $seo = SeoTitle::where('url', $_SERVER['REQUEST_URI'] ?? '')->first();
 
+        $recommendations = DB::table('recommendations')
+            ->leftJoin('cars', 'recommendations.car_id', '=', 'cars.id')
+            ->select('cars.*')
+            ->get();
+
         Paginator::useBootstrap();
 
         View::share('seo', $seo);
         View::share('brands', Brand::all());
+        View::share('recommendations', $recommendations);
 
         Blade::directive('svg', function ($expression)
         {
