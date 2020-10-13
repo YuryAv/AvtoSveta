@@ -19,7 +19,7 @@ class CatalogController extends Controller
 
         $cars = $this->_buildQuery($request, $brand);
 
-        $this->_unserializeCarImages($cars);
+        $this->unserializeCarImages($cars);
 
         return view('catalog', [
             'cars' => $cars,
@@ -29,7 +29,7 @@ class CatalogController extends Controller
         ]);
     }
 
-    private function _unserializeCarImages($cars)
+    public static function unserializeCarImages($cars)
     {
         foreach ($cars as $car)
         {
@@ -39,7 +39,8 @@ class CatalogController extends Controller
 
     private function _buildQuery(Request $request, $brand)
     {
-        return Car::when($brand, function ($query, $brand) {
+        return Car::where('status', 'active')
+            ->when($brand, function ($query, $brand) {
                 return $query->where('brand', $brand);
             })
             ->when($request->body, function ($query, $body) {
@@ -56,6 +57,6 @@ class CatalogController extends Controller
             })
             ->whereBetween('year', [$request->year['from'] ?? 0, $request->year['to'] ?? 9999])
             ->whereBetween('price', [$request->price['from'] ?? 0, $request->price['to'] ?? 9999999])
-            ->paginate(20);
+            ->paginate(20)->withPath('?' . $request->getQueryString());
     }
 }

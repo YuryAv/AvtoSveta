@@ -42,6 +42,8 @@ Route::get('/cars/{id}-{name?}', [\App\Http\Controllers\CardController::class, '
 
 Route::post('/feedback', [\App\Http\Controllers\FeedbackController::class, 'index'])->name('feedback');
 
+Route::get('/search', [\App\Http\Controllers\SearchController::class, 'index'])->name('search');
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

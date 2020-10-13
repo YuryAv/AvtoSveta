@@ -128,8 +128,8 @@
                                     </g>
                                 </svg>
                             {{ setting('site.email') }}</a></div>
-                    <form class="search" action="">
-                        <input class="search__input" type="text" />
+                    <form class="search" action="{{ route('search') }}">
+                        <input class="search__input" type="text" name="string"/>
                         <button class="search__button" type="button"><img class="search__icon lazy"
                                 src="{{ asset('img/svg/loupe.svg') }}" alt="" /></button>
                     </form>
