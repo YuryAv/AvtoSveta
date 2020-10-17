@@ -1,7 +1,7 @@
 <section class="question-section section">
     <div class="container">
-        <h2 class="section-title">10 суперважных вопросов</h2>
-        <h4 class="section-subtitle">Часто задаваемые вопросы по доставке авто из США</h4>
+        <h2 class="section-title">{{ $texts[6]->title }}</h2>
+        <h4 class="section-subtitle">{{ $texts[6]->text }}</h4>
         <ul class="question-tab-wrapper">
             @foreach($questions as $question)
             <li class="accordion">

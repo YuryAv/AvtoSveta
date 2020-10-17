@@ -2,6 +2,8 @@
 
 @section('content')
 
+    @include('modules.index.index-form')
+
     <section class="section">
         <div class="container">
             <h2 class="section-title">{{ $page->title }}</h2>

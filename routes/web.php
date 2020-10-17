@@ -30,6 +30,8 @@ Route::get('/blog', [\App\Http\Controllers\BlogController::class, 'index']);
 
 Route::get('/catalog/{brand?}', [\App\Http\Controllers\CatalogController::class, 'index'])->name('catalog');
 
+Route::get('/auction/{id?}', [\App\Http\Controllers\AuctionController::class, 'index']);
+
 Route::get('/delivery', [\App\Http\Controllers\DeliveryController::class, 'index']);
 
 Route::get('/discount', [\App\Http\Controllers\DiscountController::class, 'index']);

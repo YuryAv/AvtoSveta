@@ -1,6 +1,6 @@
 <section class="benefits section">
     <div class="container">
-        <h3 class="section-title">Выбирайте нас</h3>
+        <h3 class="section-title">{{ $texts[4]->title }}</h3>
         <div class="benefits__row">
             @foreach($benefits as $benefit)
             <div class="slide-wrap">

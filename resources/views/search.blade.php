@@ -1,6 +1,9 @@
 @extends('layouts.layout')
 
 @section('content')
+
+    @include('modules.index.index-form')
+
     <section class="section">
         <div class="container">
             <h2 class="section-title">Результаты поиска по запросу "{{ $string }}":</h2>

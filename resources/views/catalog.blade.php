@@ -9,6 +9,8 @@
 
     @include('modules.catalog.popup')
 
+    @include('modules.index.index-form')
+
     @include('modules.catalog.main')
 
     @include('modules.catalog.similar')

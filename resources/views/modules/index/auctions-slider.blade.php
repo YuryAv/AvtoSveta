@@ -8,7 +8,7 @@
                 <div class="auctions-card">
                     <div class="auctions-card__image-wrap"><img class="auctions-card__image" src="{{ asset("storage/$auction->image") }}" alt="{{ $auction->title }}"/></div>
                     <div class="auctions-card__title">{{ $auction->title }}</div>
-                    <div class="auctions-card__text">{{ $auction->text }}</div><a class="auctions-card__button button button--second" href="{{ url("auction/$auction->id") }}">Подробнее</a>
+                    <div class="auctions-card__text">{{ $auction->description }}</div><a class="auctions-card__button button button--second" href="{{ url("auction/$auction->id") }}">Подробнее</a>
                 </div>
             </div>
             @endforeach

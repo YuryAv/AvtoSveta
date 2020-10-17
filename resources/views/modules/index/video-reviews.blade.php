@@ -1,7 +1,7 @@
 <section class="section">
     <div class="container">
-        <h2 class="section-title">Видеотзывы о нашей работе</h2>
-        <h3 class="section-subtitle">Отзывы владельцев заказавших Авто из США через компанию COLUMB TRADE</h3>
+        <h2 class="section-title">{{ $texts[3]->title }}</h2>
+        <h3 class="section-subtitle">{{ $texts[3]->text }}</h3>
         <div class="vr-row pt-3">
             @foreach($videoReviews as $review)
             <div class="slide-wrap">

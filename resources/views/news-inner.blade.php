@@ -9,6 +9,8 @@
 
     @include('modules.news.popup')
 
+    @include('modules.index.index-form')
+
     @include('modules.news.main')
 
     @include('modules.feedback')

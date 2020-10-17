@@ -1,7 +1,7 @@
 <section class="top-orders section">
     <div class="container">
-        <h2 class="section-title">ТОП 10 Автомобилей из Америки</h2>
-        <h4 class="section-subtitle">Получите консультацию по цене, с учетом затрат (доставка и растаможка), по одним из самых востребованных моделей автомобилей в Украине.</h4>
+        <h2 class="section-title">{{ $texts[5]->title }}</h2>
+        <h4 class="section-subtitle">{{ $texts[5]->text }}</h4>
         <div class="top-orders__inner">
             @foreach($recommendations as $car)
             <div class="slide-wrap">

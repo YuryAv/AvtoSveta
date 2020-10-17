@@ -28,7 +28,6 @@ class IndexController extends Controller
             'tabs' => ContactsTab::all(),
             'video' => Video::first(),
             'videoReviews' => VideoReview::all(),
-            'forms' => Form::all(),
         ]);
     }
 }
