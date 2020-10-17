@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Brand;
 use App\Car;
 use App\FilterBanner;
+use App\Suggestion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -12,6 +13,7 @@ class CatalogController extends Controller
 {
     public function index(Request $request, $brand = null)
     {
+//        dd($request->getRequestUri());
         if ($request->brand)
         {
             $brand = $request->brand;
@@ -25,8 +27,23 @@ class CatalogController extends Controller
             'cars' => $cars,
             'brand' => $brand,
             'banners' => FilterBanner::all(),
-            'text' => $brand ? Brand::where('name', $brand)->first()->text : false,
+//            'text' => $brand ? Brand::where('name', $brand)->first()->text : false,
+            'text' =>  $this->_getPageText($request->getRequestUri(), $brand),
         ]);
+    }
+
+    private function _getPageText($url, $brand)
+    {
+        $count = Suggestion::where('url', $url)->count();
+
+        if (!$count)
+        {
+            return $brand ? Brand::where('name', $brand)->first()->text : false;
+        }
+        else
+        {
+            return Suggestion::where('url', $url)->first()->text;
+        }
     }
 
     public static function unserializeCarImages($cars)

@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Brand;
 use App\Form;
 use App\SeoTitle;
+use App\Suggestion;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\DB;
@@ -43,6 +44,7 @@ class AppServiceProvider extends ServiceProvider
         View::share('seo', $seo);
         View::share('brands', Brand::all());
         View::share('forms', Form::all());
+        View::share('suggestions', Suggestion::all());
         View::share('recommendations', $recommendations);
 
         Blade::directive('svg', function ($expression)

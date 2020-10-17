@@ -20,7 +20,12 @@
             <div class="col-xl-3">
                 <div class="fn-col">
                     <p class="fn-col__title">Наши предложения</p>
-                    {!! menu('Футер: Наши предложения', 'modules.footer.suggestions') !!}
+                    <ul class="fn-col__list">
+                        @foreach($suggestions as $item)
+                            <li class="fn-col__item"><a class="fn-col__link" href="{{ url($item->url) }}">{{ $item->name }}</a></li>
+                        @endforeach
+                    </ul>
+{{--                    {!! menu('Футер: Наши предложения', 'modules.footer.suggestions') !!}--}}
                 </div>
             </div>
             <div class="col-xl-3">
