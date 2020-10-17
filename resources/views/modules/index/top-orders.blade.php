@@ -1,7 +1,7 @@
 <section class="top-orders section">
     <div class="container">
         <h2 class="section-title">{{ $texts[5]->title }}</h2>
-        <h4 class="section-subtitle">{{ $texts[5]->text }}</h4>
+        <h4 class="section-subtitle">{!! $texts[5]->text !!}</h4>
         <div class="top-orders__inner">
             @foreach($recommendations as $car)
             <div class="slide-wrap">

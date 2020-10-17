@@ -1,7 +1,7 @@
 <section class="section">
     <div class="container">
         <h2 class="section-title">{{ $texts[3]->title }}</h2>
-        <h3 class="section-subtitle">{{ $texts[3]->text }}</h3>
+        <h3 class="section-subtitle">{!! $texts[3]->text !!}</h3>
         <div class="vr-row pt-3">
             @foreach($videoReviews as $review)
             <div class="slide-wrap">

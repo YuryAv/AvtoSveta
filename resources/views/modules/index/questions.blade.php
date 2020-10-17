@@ -1,7 +1,7 @@
 <section class="question-section section">
     <div class="container">
         <h2 class="section-title">{{ $texts[6]->title }}</h2>
-        <h4 class="section-subtitle">{{ $texts[6]->text }}</h4>
+        <h4 class="section-subtitle">{!! $texts[6]->text !!}</h4>
         <ul class="question-tab-wrapper">
             @foreach($questions as $question)
             <li class="accordion">
