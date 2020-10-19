@@ -1,0 +1,1 @@
+.pagination li.disabled{opacity:.3}.page-item.active .page-link{background-color:var(--mainColor);border-color:var(--mainColor)}.page-link{color:var(--mainColor)}.page-item:first-child .page-link,.page-item:last-child .page-link{border-radius:0}
