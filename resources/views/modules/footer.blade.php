@@ -46,7 +46,7 @@
                                 <a class="address-card__link" href="tel:{{ setting('site.phone') }}">{{ setting('site.phone') }}</a>
                             </div>
                             <div class="address-card">
-                                <p class="address-card__text">Email: <a class="address-card__link" href="mailto:info@columbauto.com.ua">{{ setting('site.email') }}</a></p>
+                                <p class="address-card__text">Email: <a class="address-card__link" href="mailto:{{ setting('site.email') }}">{{ setting('site.email') }}</a></p>
                             </div>
                             <div class="address-card">
                                 <p class="address-card__headline">График работы</p>

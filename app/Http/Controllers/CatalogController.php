@@ -57,6 +57,9 @@ class CatalogController extends Controller
     private function _buildQuery(Request $request, $brand)
     {
         return Car::where('status', 'active')
+            ->when($request->hit == 1, function ($query) {
+                return $query->hit();
+            })
             ->when($brand, function ($query, $brand) {
                 return $query->where('brand', $brand);
             })
