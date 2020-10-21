@@ -10,7 +10,9 @@
             @if($page->image)
             <img class="image image--full" src="{{ asset("storage/$page->image")  }}" alt="{{ $page->title }}"/>
             @endif
-            {!! $page->text !!}
+            <div class="inner-text">
+                {!! $page->text !!}
+            </div>
         </div>
     </section>
 
