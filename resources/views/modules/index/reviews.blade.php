@@ -1,7 +1,7 @@
 <section class="benefits section">
     <div class="container">
         <h2 class="section-title">Отзывы о нашей работе</h2>
-        <h3 class="section-subtitle">Отзывы владельцев заказавших Авто из США через компанию COLUMB TRADE</h3>
+        <h3 class="section-subtitle">Отзывы владельцев заказавших Авто из США через компанию AvtoSveta</h3>
         <div class="benefits__row pt-3">
             @foreach($reviews as $review)
             <div class="slide-wrap">

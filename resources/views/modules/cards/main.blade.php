@@ -31,20 +31,17 @@
           <div class="card-inner">
             <ul class="card-inner-tabs__head">
               <li class="card-inner-tabs__head-i card-inner-tabs__head-i--active">
-                <h3>Описание</h3>
-              </li>
-              <li class="card-inner-tabs__head-i">
                 <h3>Характеристики</h3>
               </li>
               <li class="card-inner-tabs__head-i">
                 <h3>Доп. Характеристики</h3>
               </li>
+              <li class="card-inner-tabs__head-i">
+                <h3>Описание</h3>
+              </li>
             </ul>
             <ul class="card-inner-tabs__body">
               <li class="card-inner-tabs__body-i inner-text">
-                  {!! $car->description !!}
-              </li>
-              <li class="card-inner-tabs__body-i inner-text" style="display: none">
                 <table>
                   <tbody>
                   @foreach($chars['main'] as $key => $value)
@@ -69,6 +66,9 @@
                   @endforeach
                   </tbody>
                 </table>
+              </li>
+              <li class="card-inner-tabs__body-i inner-text" style="display: none">
+                  {!! $car->description !!}
               </li>
             </ul>
           </div>

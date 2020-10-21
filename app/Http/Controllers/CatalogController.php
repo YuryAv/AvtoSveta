@@ -13,7 +13,6 @@ class CatalogController extends Controller
 {
     public function index(Request $request, $brand = null)
     {
-//        dd($request->getRequestUri());
         if ($request->brand)
         {
             $brand = $request->brand;
@@ -27,14 +26,16 @@ class CatalogController extends Controller
             'cars' => $cars,
             'brand' => $brand,
             'banners' => FilterBanner::all(),
-//            'text' => $brand ? Brand::where('name', $brand)->first()->text : false,
             'text' =>  $this->_getPageText($request->getRequestUri(), $brand),
         ]);
     }
 
     private function _getPageText($url, $brand)
     {
-        $count = Suggestion::where('url', $url)->count();
+        $url = urldecode($url);
+        $suggestion = Suggestion::where('url_decoded', $url);
+
+        $count = $suggestion->count();
 
         if (!$count)
         {
@@ -42,7 +43,7 @@ class CatalogController extends Controller
         }
         else
         {
-            return Suggestion::where('url', $url)->first()->text;
+            return $suggestion->first()->text;
         }
     }
 
@@ -57,6 +58,9 @@ class CatalogController extends Controller
     private function _buildQuery(Request $request, $brand)
     {
         return Car::where('status', 'active')
+            ->when($request->hit == 1, function ($query) {
+                return $query->hit();
+            })
             ->when($brand, function ($query, $brand) {
                 return $query->where('brand', $brand);
             })
