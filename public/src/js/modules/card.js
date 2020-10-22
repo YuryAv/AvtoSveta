@@ -26,7 +26,7 @@ $.each($('.card--zoom'), function (indexInArray, valueOfElement) {
     }
     if ($(valueOfElement).has('.card-slider')) {
         $(valueOfElement).on('mouseenter', function(){
-            const height = $(valueOfElement).find('img.card__image').height() -  $(valueOfElement).find('.card-slider').height() - 2;
+            const height = $(valueOfElement).find('img.card__image').height() -  $(valueOfElement).find('.card-slider').height();
             
             $(valueOfElement).find('img.card__image').css({
                 'height': height + "px",
