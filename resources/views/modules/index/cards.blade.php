@@ -2,38 +2,38 @@
     <div class="container">
         <form class="index-tabs">
             <label class="index-tabs__label" for="index-tabs0">
-                <input class="index-tabs__input" id="index-tabs0" type="radio" name="index-tabs"
-                    checked="checked" /><span class="button index-tabs__button">Авто под заказ</span>
+                <input data-tab="zakaz" class="index-tabs__input" id="index-tabs0" type="radio" name="index-tabs" checked="checked"/>
+                <span class="button index-tabs__button">Авто под заказ</span>
             </label>
             <label class="index-tabs__label" for="index-tabs1">
-                <input class="index-tabs__input" id="index-tabs1" type="radio" name="index-tabs"
-                    checked="checked" /><span class="button index-tabs__button">Авто в украине</span>
+                <input data-tab="123" class="index-tabs__input" id="index-tabs1" type="radio" name="index-tabs" checked="checked"/>
+                <span class="button index-tabs__button">Авто в украине</span>
             </label>
             <label class="index-tabs__label" for="index-tabs2">
-                <input class="index-tabs__input" id="index-tabs2" type="radio" name="index-tabs"
+                <input data-tab="электрокары" class="index-tabs__input" id="index-tabs2" type="radio" name="index-tabs"
                     checked="checked" /><span class="button index-tabs__button">Электрокары</span>
             </label>
             <label class="index-tabs__label" for="index-tabs3">
-                <input class="index-tabs__input" id="index-tabs3" type="radio" name="index-tabs"
+                <input data-tab="ещё что-то" class="index-tabs__input" id="index-tabs3" type="radio" name="index-tabs"
                     checked="checked" /><span class="button index-tabs__button">Гибриды</span>
             </label>
             <label class="index-tabs__label" for="index-tabs4">
-                <input class="index-tabs__input" id="index-tabs4" type="radio" name="index-tabs"
+                <input data-tab="" class="index-tabs__input" id="index-tabs4" type="radio" name="index-tabs"
                     checked="checked" /><span class="button index-tabs__button">Аукционы</span>
             </label>
             <label class="index-tabs__label" for="index-tabs5">
-                <input class="index-tabs__input" id="index-tabs5" type="radio" name="index-tabs"
+                <input data-tab="" class="index-tabs__input" id="index-tabs5" type="radio" name="index-tabs"
                     checked="checked" /><span class="button index-tabs__button">Электрокары</span>
             </label>
             <label class="index-tabs__label" for="index-tabs6">
-                <input class="index-tabs__input" id="index-tabs6" type="radio" name="index-tabs"
+                <input data-tab="" class="index-tabs__input" id="index-tabs6" type="radio" name="index-tabs"
                     checked="checked" /><span class="button index-tabs__button">Пикапы</span>
             </label>
         </form>
     </div>
     <div class="container">
         <div class="card-wrapper">
-            <div class="card"><a class="card__link" href="card-inner.html">
+            <div class="card" data-card-tab="123"><a class="card__link" href="card-inner.html">
                     <div class="card__tags"> <span class="card__tag tag tag--blue">new</span></div><img
                         class="card__image lazy" data-src="../img/cars/1.jpg" alt="..." />
                 </a>
@@ -392,7 +392,7 @@ c0.2,0,0.4,0,0.6,0s0.4,0,0.6,0c43.7,0.3,79.7,33.7,84.2,76.3H378.7z" />
                     <button class="card__button">Заказать</button>
                 </div>
             </div>
-            <div class="card"><a class="card__link" href="card-inner.html">
+            <div class="card" data-card-tab="123"><a class="card__link" href="card-inner.html">
                     <div class="card__tags"><span class="card__tag tag tag--blue">sale</span></div><img
                         class="card__image lazy" data-src="../img/cars/2.jpg" alt="..." />
                 </a>
@@ -751,7 +751,7 @@ c0.2,0,0.4,0,0.6,0s0.4,0,0.6,0c43.7,0.3,79.7,33.7,84.2,76.3H378.7z" />
                     <button class="card__button">Заказать</button>
                 </div>
             </div>
-            <div class="card"><a class="card__link" href="card-inner.html">
+            <div class="card"  data-card-tab="zakaz"><a class="card__link" href="card-inner.html">
                     <div class="card__tags"> <span class="card__tag tag tag--blue">sale </span><span
                             class="card__tag tag tag--blue">new</span></div>
                     <ul class="star-rating">
@@ -1158,7 +1158,7 @@ c0.2,0,0.4,0,0.6,0s0.4,0,0.6,0c43.7,0.3,79.7,33.7,84.2,76.3H378.7z" />
                     <button class="card__button">Заказать</button>
                 </div>
             </div>
-            <div class="card"><a class="card__link" href="card-inner.html"><img class="card__image lazy"
+            <div class="card" data-card-tab="zakaz"><a class="card__link" href="card-inner.html"><img class="card__image lazy"
                         data-src="../img/cars/4.jpg" alt="..." /></a>
                 <div class="card__body">
                     <h4 class="card__title">AUDI Q7 PREMIUM PLUS 2010</h4>
@@ -1515,7 +1515,7 @@ c0.2,0,0.4,0,0.6,0s0.4,0,0.6,0c43.7,0.3,79.7,33.7,84.2,76.3H378.7z" />
                     <button class="card__button">Заказать</button>
                 </div>
             </div>
-            <div class="card"><a class="card__link" href="card-inner.html"><img class="card__image lazy"
+            <div class="card" data-card-tab="ещё что-то"><a class="card__link" href="card-inner.html"><img class="card__image lazy"
                         data-src="../img/cars/5.jpg" alt="..." /></a>
                 <div class="card__body">
                     <h4 class="card__title">AUDI Q7 PREMIUM PLUS 2010</h4>
@@ -1872,7 +1872,7 @@ c0.2,0,0.4,0,0.6,0s0.4,0,0.6,0c43.7,0.3,79.7,33.7,84.2,76.3H378.7z" />
                     <button class="card__button">Заказать</button>
                 </div>
             </div>
-            <div class="card"><a class="card__link" href="card-inner.html"><img class="card__image lazy"
+            <div class="card" data-card-tab="123"><a class="card__link" href="card-inner.html"><img class="card__image lazy"
                         data-src="../img/cars/6.jpg" alt="..." /></a>
                 <div class="card__body">
                     <h4 class="card__title">AUDI Q7 PREMIUM PLUS 2010</h4>
@@ -2229,7 +2229,7 @@ c0.2,0,0.4,0,0.6,0s0.4,0,0.6,0c43.7,0.3,79.7,33.7,84.2,76.3H378.7z" />
                     <button class="card__button">Заказать</button>
                 </div>
             </div>
-            <div class="card"><a class="card__link" href="card-inner.html">
+            <div class="card" data-card-tab="электрокары"><a class="card__link" href="card-inner.html">
                     <div class="card__tags"> <span class="card__tag tag tag--blue">new</span></div><img
                         class="card__image lazy" data-src="../img/cars/1.jpg" alt="..." />
                 </a>

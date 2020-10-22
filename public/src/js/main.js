@@ -6,6 +6,7 @@ $(function () {
     @@include('modules/popup.js')
     @@include('modules/navigation.js')
     @@include('modules/index-video.js')
+    @@include('modules/index-tabs.js')
     @@include('modules/search.js')
     @@include('modules/select.js')
     @@include('modules/scroll-top.js')
