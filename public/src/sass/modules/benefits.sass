@@ -24,7 +24,7 @@
     padding: 0.3em
     padding-top: 1.2em
     background: $bgColor
-    height: 275px
+    height: 250px
     @media screen and ( max-width: 991px )
         font-size: 39px
     @media screen and ( max-width: 767px )
@@ -72,14 +72,20 @@
         +t16
         color: $blue
         position: absolute
-        top: 158px
-        left: 0
-        right: 0
-        width: 100%
+        top: 133px
+        left: -1px
+        right: -1px
+        width: calc(100% + 2px)
         padding: 0 5px
         height: 100px
-        text-overflow: ellipsis
         overflow: hidden
+        cursor: pointer
+        &--visible
+            height: auto
+            background: $bgColor
+            border: 1px solid $red
+            border-top: none
+            padding-bottom: 5px
     &:hover
         border-color: $red
         .benefits-card__icon

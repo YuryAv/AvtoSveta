@@ -3,6 +3,7 @@ $(function () {
     @@include('modules/lazy.js')
     @@include('modules/accordion.js')
     @@include('modules/animation.js')
+    @@include('modules/benefits-card-text.js')
     @@include('modules/popup.js')
     @@include('modules/navigation.js')
     @@include('modules/index-video.js')
