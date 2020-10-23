@@ -64,19 +64,15 @@ const images = () => {
 
 const pugComplete = () => {
     return gulp.src('src/pug/**/*.pug')
-        .pipe(gulpFileInclude({
-            prefix: '@@',
-            basepath: '@file'
-        }))
         .pipe(pug({ pretty: true }))
-        .pipe(gulp.dest('dist/html/'))
+        .pipe(gulp.dest('templates/'))
 }
 
 const watch = () => {
     gulp.watch('./src/sass/**/*.sass', styles);
     gulp.watch('./src/sass/**/*.scss',styles);
-    gulp.watch('./src/js/**/*.js',scripts);
-    // gulp.watch('./src/pug/**/*.pug', gulp.series(delInDist, pugComplete));
+    gulp.watch('./src/js/**/*.js', scripts);
+    gulp.watch('./src/pug/**/*.pug', pugComplete);
 }
 
 const delInImg = () => {
@@ -86,6 +82,7 @@ const delInImg = () => {
 gulp.task('css', styles);
 gulp.task('js', scripts);
 gulp.task('watch', watch);
+gulp.task('pug', pugComplete);
 // gulp.task('pug', pugComplete);
 // gulp.task('img', gulp.series(delInImg, images));
 
