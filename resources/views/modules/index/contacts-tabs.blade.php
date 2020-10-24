@@ -2,7 +2,7 @@
     <div class="container">
         <div class="contacts-tabs__inner">
             <div class="contacts-tabs__list">
-                @foreach($tabs as $tab)
+                @foreach($contactTabs as $tab)
                     <div class="contacts-tabs__item c-tab">
                         <div class="c-tab__inner">
                             <h4 class="c-tab__title">{{ $tab->name }}</h4>
