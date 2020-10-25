@@ -21,7 +21,7 @@ class CarTab extends Model
 
         foreach ($output as $key => $value)
         {
-            if($value && $key != 'year' && $key != 'price')
+            if($value)
             {
                 $params[$key] = $value;
             }

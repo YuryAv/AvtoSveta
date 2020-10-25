@@ -44,7 +44,7 @@ class IndexController extends Controller
 
         foreach ($carTabs as $carTab)
         {
-            $carsBlock = Car::select()->selectRaw("'$carTab->name' as tabName")->paramFilters(json_decode($carTab->params))->take(10)->get();
+            $carsBlock = Car::select()->selectRaw("'$carTab->name' as tabName")->paramFilters(json_decode($carTab->params, true))->take(10)->get();
 
             $cars = $cars->merge($carsBlock);
         }
