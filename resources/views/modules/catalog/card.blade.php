@@ -1,4 +1,4 @@
-<div class="card card--zoom">
+<div class="card card--zoom" data-card-tab="{{ $car->tabName }}">
     <a class="card__link" href="{{ url("cars/$car->id-" . \Illuminate\Support\Str::slug($car->name)) }}">
         <div class="card__tags">
             <span class="card__tag tag tag--blue">new</span>
@@ -7,6 +7,7 @@
     </a>
     </a>
     <ul class="card-slider card__slider" style="">
+<<<<<<< HEAD
         @foreach($car->images as $image)
         @if ($loop->iteration > 3)
         @break
@@ -14,6 +15,14 @@
         <li class="card-slider__item">
             <img class="card-slider__image" src="{{ asset('storage/' . $image) }}" alt="">
         </li>
+=======
+        @foreach(json_decode($car->images) as $image)
+            @if ($loop->iteration > 3)
+                @break
+            @endif
+            <li class="card-slider__item"><img class="card-slider__image" src="{{ asset('storage/' . $image) }}" alt="">
+            </li>
+>>>>>>> 911bac84e21cb54372b58a3c601979088a66444d
         @endforeach
     </ul>
     <div class="card__inner">
