@@ -6,9 +6,7 @@ const setCardSliderSize = () => {
     $.each($('.card-slider'), function (indexInArray, valueOfElement) { 
         const wh = ($(valueOfElement).width() - 0) / 3;
 
-        $(valueOfElement).find('.card-slider__item').css('height', wh+'px')
-
-        console.log(wh);
+        $(valueOfElement).find('.card-slider__item').css('height', wh+'px');
     });
 }
 
@@ -26,7 +24,7 @@ $.each($('.card--zoom'), function (indexInArray, valueOfElement) {
     }
     if ($(valueOfElement).has('.card-slider')) {
         $(valueOfElement).on('mouseenter', function(){
-            const height = $(valueOfElement).find('img.card__image').height() -  $(valueOfElement).find('.card-slider').height();
+            const height = $(valueOfElement).find('img.card__image').height() - $(valueOfElement).find('.card-slider').height() - 1;
             
             $(valueOfElement).find('img.card__image').css({
                 'height': height + "px",
