@@ -1,1 +1,1 @@
-"use strict";$(".index-tabs__input").on("change",(function(){var a=$(this).attr("data-tab");console.log($(this).attr("data-tab")),$.each($(".card-wrapper .card"),(function(t,r){$(r).attr("data-card-tab")!=a&&$(r).fadeOut(300)}))}));
+"use strict";$(".index-tabs__input").on("change",(function(){var a=$(this).attr("data-tab");$.each($(".card"),(function(t,n){$(n).attr("data-card-tab")!=a?$(n).fadeOut(300):$(n).fadeIn(300)}))}));
