@@ -12,7 +12,8 @@ $('.banner__slider').slick({
     autoplay: true,
     autoplaySpeed: 2000,
     nextArrow: nextArrowBig,
-    prevArrow: prevArrowBig
+    prevArrow: prevArrowBig,
+    infinite: false
 });
 
 $('.page-slider__top').slick({
@@ -23,7 +24,8 @@ $('.page-slider__top').slick({
     dots: false,
     asNavFor: '.page-slider__bottom',
     nextArrow: nextArrowBig,
-    prevArrow: prevArrowBig
+    prevArrow: prevArrowBig,
+    infinite: false
 })
 
 $('.page-slider__bottom').slick({
@@ -35,6 +37,7 @@ $('.page-slider__bottom').slick({
     centerMode: true,
     asNavFor: '.page-slider__top',
     focusOnSelect: true,
+    infinite: false,
     responsive: [
         {
             breakpoint: 1200,
@@ -68,6 +71,7 @@ if ($('.contacts-tabs__item').length > 5) {
         nextArrow: nextArrowSmall,
         prevArrow: prevArrowSmall,
         adaptiveHeight: true,
+        infinite: false,
         responsive: [
             {
                 breakpoint: 1200,
@@ -108,6 +112,7 @@ $.each(sectionSliders, function (indexInArray, valueOfElement) {
         nextArrow: nextArrowSmall,
         prevArrow: prevArrowSmall,
         adaptiveHeight: true,
+        infinite: false,
         responsive: [
             {
                 breakpoint: 992,
