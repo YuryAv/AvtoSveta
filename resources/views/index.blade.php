@@ -2,6 +2,8 @@
 
 @section('content')
 
+    @include('modules.popup-form')
+
     @include('modules.index.popup')
 
     @include('modules.index.contacts-tabs')

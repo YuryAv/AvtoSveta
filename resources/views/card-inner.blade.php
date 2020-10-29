@@ -4,6 +4,8 @@
 
     @include('modules.cards.popup')
 
+    @include('modules.popup-form')
+
     @include('modules.index.index-form')
 
     @include('modules.cards.main')
