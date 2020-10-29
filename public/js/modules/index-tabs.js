@@ -1,1 +1,1 @@
-"use strict";$(".index-tabs__input").on("change",(function(){var a=$(this).attr("data-tab");$.each($(".card"),(function(t,n){$(n).attr("data-card-tab")!=a?$(n).fadeOut(300):$(n).fadeIn(300)}))}));
+"use strict";$(".index-tabs__input").on("change",(function(){var a=$(this).attr("data-tab");$.each($(".card"),(function(t,d){console.log({"data-card":$(d).attr("data-card-tab"),tabValue:a,if:$(d).attr("data-card-tab")!=a}),$(d).attr("data-card-tab")!=a?$(d).fadeOut(300):$(d).fadeIn(300)}))}));
