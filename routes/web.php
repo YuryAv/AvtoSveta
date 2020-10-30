@@ -19,7 +19,7 @@ Route::get('/clear-cache', function() {
     return 'DONE'; //Return anything
 });
 
-Route::get('/', [\App\Http\Controllers\IndexController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\IndexController::class, 'index'])->name('index');
 
 Route::get('/content/{slug?}', [\App\Http\Controllers\PageController::class, 'index']);
 
@@ -45,6 +45,8 @@ Route::get('/cars/{id}-{name?}', [\App\Http\Controllers\CardController::class, '
 Route::post('/feedback', [\App\Http\Controllers\FeedbackController::class, 'index'])->name('feedback');
 
 Route::get('/search', [\App\Http\Controllers\SearchController::class, 'index'])->name('search');
+
+Route::get('/car/publish/{id}', [\App\Http\Controllers\CatalogController::class, 'publishCar'])->name('car.publish');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

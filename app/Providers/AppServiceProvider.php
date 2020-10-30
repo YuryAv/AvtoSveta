@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use TCG\Voyager\Facades\Voyager;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -51,5 +52,7 @@ class AppServiceProvider extends ServiceProvider
         {
             return "<?php echo Storage::disk('public')->get(json_decode($expression)[0]->download_link); ?>";
         });
+
+        Voyager::addAction(\App\Actions\PublishCar::class);
     }
 }
