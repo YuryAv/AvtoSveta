@@ -42,9 +42,20 @@ class IndexController extends Controller
     {
         $cars = new Collection();
 
+        $brand = null;
+
         foreach ($carTabs as $carTab)
         {
-            $carsBlock = Car::select()->selectRaw("'$carTab->name' as tabName")->paramFilters(json_decode($carTab->params, true))->take(10)->get();
+            $params = json_decode($carTab->params, true);
+
+            if (array_key_exists('brand', $params))
+            {
+                $brand = $params['brand'];
+
+                unset($params['brand']);
+            }
+
+            $carsBlock = Car::select()->selectRaw("'$carTab->name' as tabName")->paramFilters($params, $brand)->take(10)->get();
 
             $cars = $cars->merge($carsBlock);
         }
