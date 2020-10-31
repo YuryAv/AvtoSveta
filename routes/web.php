@@ -27,6 +27,7 @@ Route::get('/news', [\App\Http\Controllers\NewsController::class, 'index']);
 Route::get('/news/{id?}', [\App\Http\Controllers\NewsController::class, 'showNews']);
 
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, 'index']);
+Route::get('/blog/{id}', [\App\Http\Controllers\BlogController::class, 'showBlog']);
 
 Route::get('/catalog/{brand?}', [\App\Http\Controllers\CatalogController::class, 'index'])->name('catalog');
 
