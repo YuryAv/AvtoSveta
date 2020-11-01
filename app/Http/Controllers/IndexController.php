@@ -34,11 +34,11 @@ class IndexController extends Controller
             'video' => Video::first(),
             'videoReviews' => VideoReview::all(),
             'carTabs' => $carTabs,
-            'cars' => $this->_getCars($carTabs),
+            'cars' => $this->_getCars($carTabs, setting('site.count_tab_cars')),
         ]);
     }
 
-    private function _getCars($carTabs)
+    private function _getCars($carTabs, int $count = 10)
     {
         $cars = new Collection();
 
@@ -55,7 +55,7 @@ class IndexController extends Controller
                 unset($params['brand']);
             }
 
-            $carsBlock = Car::select()->selectRaw("'$carTab->name' as tabName")->paramFilters($params, $brand)->take(10)->get();
+            $carsBlock = Car::select()->selectRaw("'$carTab->name' as tabName")->paramFilters($params, $brand)->take($count)->get();
 
             $cars = $cars->merge($carsBlock);
         }
