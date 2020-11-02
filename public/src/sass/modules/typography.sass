@@ -87,6 +87,9 @@ p.paragraphp
                 margin-right: 0.5em
                 border-radius: 50% 
                 background: $red
+    a
+        text-decoration: underline
+        opacity: 0.85
     p        
         +t16
         line-height: 1.3em
@@ -101,6 +104,15 @@ p.paragraphp
         tr
             &:nth-of-type(2n - 1)
                 background: rgba(24,56,103, 0.2)
+    .block
+        width: calc(50% - 15px)
+        padding: 5px 0
+        &:nth-child(2n)
+            float: left
+        &:nth-child(2n - 1)
+            float: right
+            
+
 
 .list
     +t16

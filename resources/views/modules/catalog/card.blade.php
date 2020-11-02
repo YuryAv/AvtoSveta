@@ -11,7 +11,8 @@
             @if ($loop->iteration > 3)
                 @break
             @endif
-            <li class="card-slider__item"><img class="card-slider__image" src="{{ asset('storage/' . $image) }}" alt="">
+            <li class="card-slider__item">
+                <img class="card-slider__image" data-mysrc="{{ asset('storage/' . $image) }}" alt="">
             </li>
         @endforeach
     </ul>

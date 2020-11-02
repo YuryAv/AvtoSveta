@@ -10,7 +10,7 @@
     <meta name="googlebot" content="{{ $seo->googlebot ?? '' }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}"/>
+    <!-- <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}"/> -->
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.lazy.min.js') }}"></script>
     <script src="{{ asset('assets/js/slick.min.js') }}"></script>
