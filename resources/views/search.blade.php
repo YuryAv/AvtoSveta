@@ -4,6 +4,8 @@
 
     @include('modules.index.index-form')
 
+    @include('modules.popup-form')
+
     <section class="section">
         <div class="container">
             <h2 class="section-title">Результаты поиска по запросу "{{ $string }}":</h2>

@@ -6,6 +6,7 @@ use App\Brand;
 use App\Car;
 use App\FilterBanner;
 use App\Suggestion;
+use App\UnpublishedCar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -51,5 +52,22 @@ class CatalogController extends Controller
         {
             $car->images = json_decode($car->images);
         }
+    }
+
+    public function publishCar($id)
+    {
+        DB::transaction(function () use ($id)
+        {
+            $unpublishedCar = UnpublishedCar::find($id);
+
+            $arr = $unpublishedCar->toArray();
+            array_shift($arr);
+
+            Car::create($arr);
+
+            $unpublishedCar->delete();
+        });
+
+        return redirect()->back();
     }
 }

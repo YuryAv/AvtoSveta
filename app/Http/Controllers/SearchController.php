@@ -17,8 +17,6 @@ class SearchController extends Controller
 
         $cars = $this->_buildQuery($string);
 
-        CatalogController::unserializeCarImages($cars);
-
         return view('search', [
             'cars' => $cars,
             'string' => $string,

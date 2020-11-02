@@ -15,4 +15,11 @@ class BlogController extends Controller
             'cards' => $cards,
         ]);
     }
+
+    public function showBlog($id)
+    {
+        return view('default-page', [
+            'page' => BlogPage::find($id),
+        ]);
+    }
 }
