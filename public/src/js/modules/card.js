@@ -4,11 +4,11 @@ $('.card__button').on('click', function(){
 
 const setCardSliderSize = () => {
     $.each($('.card-slider'), function (indexInArray, valueOfElement) { 
-        const wh = $(valueOfElement).closest('.card--zoom').width() / 3;
+        const wh = ($(valueOfElement).width() - 0) / 3;
 
         $(valueOfElement).find('.card-slider__item').css('height', wh+'px');
     });
-};
+}
 
 setCardSliderSize();
 
@@ -24,14 +24,6 @@ $.each($('.card--zoom'), function (indexInArray, valueOfElement) {
     }
     if ($(valueOfElement).has('.card-slider')) {
         $(valueOfElement).on('mouseenter', function(){
-
-            if ($(valueOfElement).find('.card-slider__image') != undefined) {
-                $.each($(valueOfElement).find('.card-slider__image'), function(ind, val) {
-                    $(val).attr('src', $(val).attr('data-mysrc'));
-                })
-            }
-
-
             const height = $(valueOfElement).find('img.card__image').height() - $(valueOfElement).find('.card-slider').height() - 1;
             
             $(valueOfElement).find('img.card__image').css({
