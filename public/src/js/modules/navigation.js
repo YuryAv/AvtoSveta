@@ -44,7 +44,13 @@ $(document).on('scroll', function (e) {
 })
 
 $('button.mobile').on('click', function(){
-    $(this).toggleClass('mobile--active');
-    $('.navigation__inner').toggleClass('navigation__inner--opened');
-    $('body').toggleClass('body--overflow');
+    $(this).addClass('mobile--active');
+    $('.navigation__inner').addClass('navigation__inner--opened');
+    $('body').addClass('body--overflow');
+})
+
+$('button.mobile--active').on('click', function(){
+    $(this).removeClass('mobile--active');
+    $('.navigation__inner').removeClass('navigation__inner--opened');
+    $('body').removeClass('body--overflow');
 })

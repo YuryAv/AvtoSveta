@@ -4,7 +4,9 @@ $('.card__button').on('click', function(){
 
 const setCardSliderSize = () => {
     $.each($('.card-slider'), function (indexInArray, valueOfElement) { 
-        const wh = ($(valueOfElement).width() - 0) / 3;
+        const wh = $(valueOfElement).closest('.card').width() / 3;
+
+        console.log(wh)
 
         $(valueOfElement).find('.card-slider__item').css('height', wh+'px');
     });
