@@ -8,7 +8,7 @@
         <div class="container">
             <h2 class="section-title">{{ $page->title }}</h2>
             @if($page->image)
-            <img class="image image--full" src="{{ asset("storage/$page->image")  }}" alt="{{ $page->title }}"/>
+            <img class="image image--full lazy" data-src="{{ asset("storage/$page->image")  }}" alt="{{ $page->title }}"/>
             @endif
             <div class="inner-text">
                 {!! $page->text !!}
