@@ -6,9 +6,9 @@
                     <input data-tab="{{ $tab->name }}"
                            class="index-tabs__input"
                            id="index-tabs{{ $loop->iteration }}"
-                           type="radio" name="index-tabs"
-                           @if($loop->iteration === 1) checked="checked" @endif/>
-                    <span class="button index-tabs__button">{{ $tab->text }}</span>
+                           type="radio" name="index-tabs" />
+{{--                           @if($loop->iteration === 1) checked="checked" @endif/>--}}
+                    <a href="/?carTabId={{$tab->id}}" class="button index-tabs__button">{{ $tab->text }}</a>
                 </label>
             @endforeach
         </form>

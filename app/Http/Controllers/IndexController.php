@@ -19,9 +19,20 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $carTabs = CarTab::all();
+
+        $cars = null;
+
+        if (!empty($request->get('carTabId')))
+        {
+            $cars = $this->_getCarsFromLink($carTabs, setting('site.count_tab_cars'), $request->get('carTabId'));
+        }
+        else
+        {
+            $cars = $this->_getCarsFromLink($carTabs, setting('site.count_tab_cars'));
+        }
 
         return view('index', [
             'reviews' => Review::all(),
@@ -34,7 +45,8 @@ class IndexController extends Controller
             'video' => Video::first(),
             'videoReviews' => VideoReview::all(),
             'carTabs' => $carTabs,
-            'cars' => $this->_getCars($carTabs, setting('site.count_tab_cars')),
+//            'cars' => $this->_getCars($carTabs, setting('site.count_tab_cars')),
+            'cars' => $cars,
         ]);
     }
 
@@ -61,5 +73,27 @@ class IndexController extends Controller
         }
 
         return $cars;
+    }
+
+    private function _getCarsFromLink($carTabs, int $count = 10, $carTabId = 1)
+    {
+        $cars = new Collection();
+
+        $carTab = $carTabs[$carTabId - 1];
+
+        $brand = null;
+
+            $params = json_decode($carTab->params, true);
+
+            if (array_key_exists('brand', $params))
+            {
+                $brand = $params['brand'];
+
+                unset($params['brand']);
+            }
+
+            $carsBlock = Car::select()->selectRaw("'$carTab->name' as tabName")->paramFilters($params, $brand)->take($count)->get();
+
+        return $carsBlock;
     }
 }
