@@ -49,7 +49,7 @@
                                 </g>
                             </svg>
                         </button>
-                        <div class="review__filter"></div><img class="review__image" src="{{ asset("storage/$review->preview") }}" alt="{{ $review->title }}" />
+                        <div class="review__filter"></div><img class="review__image lazy" data-src="{{ asset("storage/$review->preview") }}" alt="{{ $review->title }}" />
                     </div>
                     <div class="review__footer">
                         <h4 class="review__title">{{ $review->title }}</h4>

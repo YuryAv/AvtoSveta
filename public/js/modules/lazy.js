@@ -1,1 +1,1 @@
-"use strict";$(".lazy").Lazy();
+"use strict";$(".lazy").Lazy({threshold:$(window).width()>767?200:100});
