@@ -7,7 +7,7 @@
             <div class="slide-wrap">
                 <div class="card">
                     <a class="card__link" href="{{ url("cars/$car->id-" . \Illuminate\Support\Str::slug($car->name)) }}">
-                        <img class="card__image lazy" src="{{ asset('storage/' . json_decode($car->images)[0]) }}" alt="{{ $car->name }}"/>
+                        <img class="card__image lazy" data-src="{{ asset('storage/' . json_decode($car->images)[0]) }}" alt="{{ $car->name }}"/>
                     </a>
                     <div class="card__body">
                         <h4 class="card__title">{{ $car->name }}</h4>
