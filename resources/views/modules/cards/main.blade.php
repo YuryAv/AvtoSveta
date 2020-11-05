@@ -7,12 +7,12 @@
             <div class="col-lg-9">
                 <div class="page-slider">
                     <div class="page-slider__top">
-                        @foreach(json_decode($car->images) as $image)
+                        @foreach($car->imageList as $image)
                             <div class="page-slider__top-slide"><img class="page-slider__top-image lazy" src="{{ asset("storage/$image") }}" alt="{{ $car->name }}"/></div>
                         @endforeach
                     </div>
                     <div class="page-slider__bottom">
-                        @foreach(json_decode($car->images) as $image)
+                        @foreach($car->imageList as $image)
                         <div class="page-slider__bottom-slide"><img class="page-slider__bottom-image lazy" src="{{ asset("storage/$image") }}" alt="{{ $car->name }}"/></div>
                         @endforeach
                     </div>

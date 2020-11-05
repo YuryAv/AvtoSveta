@@ -16,6 +16,11 @@ class Car extends Model
         return $query->where('additional', 1);
     }
 
+    public function getImageListAttribute()
+    {
+        return json_decode($this->images);
+    }
+
     public function scopeParamFilters($query, $params, $brand = null)
     {
         if ($params)
