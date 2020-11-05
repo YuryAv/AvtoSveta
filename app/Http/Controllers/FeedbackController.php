@@ -8,8 +8,6 @@ use Illuminate\Http\Request;
 
 class FeedbackController extends Controller
 {
-    const TG_TOKEN = '1481347293:AAGL8VxmqNdX5A1ffWxyO7S6fwEDvF-fb3Q';
-
     public function index(Request $request)
     {
         $feedback = new Feedback;
@@ -32,7 +30,8 @@ class FeedbackController extends Controller
 
     private function _sendToTG($feedback)
     {
-        $tg = new Telegram(self::TG_TOKEN);
+        $token = env('TG_TOKEN');
+        $tg = new Telegram($token);
         date_default_timezone_set('Europe/Moscow');
         $time = date('d.m.Y H:i', time());
         $tg->sendMessage($time, $feedback->phone, $feedback->name, $feedback->comment);

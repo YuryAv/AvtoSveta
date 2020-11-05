@@ -3,7 +3,6 @@
 namespace App\Bots;
 
 class Telegram {
-    const TG_GROUP_CHAT_ID = '-455862374';
     public $token = '';
 
     public function __construct($token) {
@@ -42,7 +41,7 @@ class Telegram {
 
 
         $url = "https://api.telegram.org/bot{$this->token}/sendMessage?" . http_build_query([
-                'chat_id' => self::TG_GROUP_CHAT_ID,
+                'chat_id' => env('TG_GROUP_CHAT_ID'),
                 'text' => $message,
                 'parse_mode' => 'markdown'
             ]);

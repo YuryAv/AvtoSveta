@@ -68,7 +68,15 @@
                 </table>
               </li>
               <li class="card-inner-tabs__body-i inner-text" style="display: none">
-                  {!! $car->description !!}
+                  @if(empty($car->description))
+                      <p>В продаже {{ $car->name }}.</p>
+                      <p>Машина находится на аукционе в США.</p>
+                      <p>Указана предполагаемая цена покупки без учета доставки и растаможки.</p>
+                      <p>Купите авто в США с компанией AvtoSveta и сохраните до 5000 $.</p>
+                      <p>Звоните:  {{ setting('site.phone') }}  {{ setting('site.phone2') }}</p>
+                  @else
+                      {!! $car->description !!}
+                  @endif
               </li>
             </ul>
           </div>
