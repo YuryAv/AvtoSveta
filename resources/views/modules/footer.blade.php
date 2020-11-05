@@ -25,7 +25,6 @@
                             <li class="fn-col__item"><a class="fn-col__link" href="{{ url($item->url) }}">{{ $item->name }}</a></li>
                         @endforeach
                     </ul>
-{{--                    {!! menu('Футер: Наши предложения', 'modules.footer.suggestions') !!}--}}
                 </div>
             </div>
             <div class="col-xl-3">
@@ -46,12 +45,8 @@
                                 <a class="address-card__link" href="tel:{{ setting('site.phone') }}">{{ setting('site.phone') }}</a>
                             </div>
                             <div class="address-card">
-                                <p class="address-card__text">Email: <a class="address-card__link" href="mailto:{{ setting('site.email') }}">{{ setting('site.email') }}</a></p>
-                            </div>
-                            <div class="address-card">
                                 <p class="address-card__headline">График работы</p>
-                                <p class="address-card__headline">Пн-Сб: с 9:00 до 20:00</p>
-                                <p class="address-card__headline">Вс: По согласованию</p>
+                                <p class="address-card__headline">Пн-Вс: 24/7</p>
                             </div>
                         </li>
                     </ul>
