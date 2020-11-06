@@ -44,14 +44,15 @@ $(document).on('scroll', function (e) {
 })
 
 $('button.mobile').on('click', function(){
-    $(this).addClass('mobile--active');
-    $('button.mobile--active').on('click', function(){
+    if ($(this).hasClass('mobile--active')) {
         $(this).removeClass('mobile--active');
         $('.navigation__inner').removeClass('navigation__inner--opened');
         $('body').removeClass('body--overflow');
-    })
-    $('.navigation__inner').addClass('navigation__inner--opened');
-    $('body').addClass('body--overflow');
+    } else {
+        $(this).addClass('mobile--active');
+        $('.navigation__inner').addClass('navigation__inner--opened');
+        $('body').addClass('body--overflow');
+    }
 })
 
 
