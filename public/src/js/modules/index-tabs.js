@@ -9,21 +9,23 @@ $('.index-tabs__button').on('click', function(){
         tabCount = 4;
     };
 
-
     let dataJSON = JSON.stringify({
         carTabId: $(this).attr('data-id'),
         cardTabCount: tabCount
     });
 
-    console.log(dataJSON)
+    console.log(dataJSON);
 
     $.ajax({
-        type: 'POST',
-        url: "test.html",
+        url: 'getTabCars',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        method: 'POST',
         data: dataJSON,
         success: function(result){
             console.log(result);
             $('.section .card-wrapper').html(result);
-        }
+        },
     });  
 });
