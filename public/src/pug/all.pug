@@ -12,14 +12,16 @@ html(lang="en")
         script(src="http://u1155413.isp.regruhosting.ru/assets/js/jquery.lazy.min.js")
         script(src="http://u1155413.isp.regruhosting.ru/assets/js/slick.min.js")
         script(src="../js/main.js")
-    body(style="--btnColor: #FA2828;--mainColor: #1B4788;--bgColor: #ffffff;background: #808080; padding: 70px 0")
-        .container(style="display: flex; flex-direction: column; align-items: flex-start")
-            .card-wrapper
-                each item in [1,2,3,4,5,6]
-                    include card.pug
-            include card-short.pug
-            include benefits-card
-            include benefits-card
+    body(style="--btnColor: #FA2828;--mainColor: #1B4788;--bgColor: #ffffff;background: #808080; padding: 70px 0")    
+        include breadcrumbs
+        section
+            .container(style="display: flex; flex-direction: column; align-items: flex-start")
+                .card-wrapper
+                    each item in [1,2,3,4,5,6]
+                        include card.pug
+                include card-short.pug
+                include benefits-card
+                include benefits-card
         section
             include index-tabs
             .container
