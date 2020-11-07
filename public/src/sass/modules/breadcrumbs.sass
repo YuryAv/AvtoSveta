@@ -1,0 +1,25 @@
+@import _colors
+@import _mixines
+
+.breadcrumbs
+    margin: 20px 0
+    &__list
+        display: inline
+    &__item
+        display: inline
+        +t16
+        &::after
+            content: '>'
+            font-family: 'Roboto'
+            color: $blue
+            margin: 0 0.5em
+        &:last-child
+            &::after
+                display: none            
+    &__link
+        color: $blue
+        +t16
+        text-decoration: none   
+        &:hover
+            color: $blue
+            text-decoration-color: $red     
