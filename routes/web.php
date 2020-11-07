@@ -21,6 +21,8 @@ Route::get('/clear-cache', function() {
 
 Route::get('/', [\App\Http\Controllers\IndexController::class, 'index'])->name('index');
 
+Route::post('/getTabCars', [\App\Http\Controllers\IndexController::class, 'getTabCars']);
+
 Route::get('/content/{slug?}', [\App\Http\Controllers\PageController::class, 'index']);
 
 Route::get('/news', [\App\Http\Controllers\NewsController::class, 'index']);
