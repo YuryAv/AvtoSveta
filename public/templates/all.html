@@ -284,19 +284,229 @@
     <section>
       <div class="container">
         <form class="index-tabs">
-          <label class="index-tabs__label" for="index-tabs1">
-            <input class="index-tabs__input" id="index-tabs1" data-tab="test_1" type="radio" name="index-tabs" checked="checked"/><span class="button index-tabs__button">Тест 1</span>
-          </label>
-          <label class="index-tabs__label" for="index-tabs2">
-            <input class="index-tabs__input" id="index-tabs2" data-tab="elektrokary" type="radio" name="index-tabs"/><span class="button index-tabs__button">Электрокары</span>
-          </label>
-          <label class="index-tabs__label" for="index-tabs3">
-            <input class="index-tabs__input" id="index-tabs3" data-tab="test_3" type="radio" name="index-tabs"/><span class="button index-tabs__button">Тест 3</span>
-          </label>
+          <button class="button index-tabs__button" data-id="1" type="button">Тест 1</button>
+          <button class="button index-tabs__button" data-id="2" type="button">Электрокары</button>
+          <button class="button index-tabs__button" data-id="3" type="button">Тест 3</button>
         </form>
       </div>
-      <div class="card-wrapper">
-        <div class="container">
+      <div class="container">
+        <div class="card-wrapper">
+          <div class="card card--zoom"><a class="card__link" href="#">
+              <div class="card__tags"><span class="card__tag tag tag--blue">new</span></div><img class="card__image lazy" alt="..." src="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/kBAxgU849r7689e7bfbfd08d919ec6f7da25038a13.JPG"/></a>
+            <ul class="card-slider card__slider">
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/kBAxgU849r7689e7bfbfd08d919ec6f7da25038a13.JPG" alt=""/></li>
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/j7SeBZ03Dd01c44aa337303ace84935cf2bdbcfc9f.JPG" alt=""/></li>
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/e0YnjVGH4M43af8a33812bb501147f0bf40c31027a.JPG" alt=""/></li>
+            </ul>
+            <div class="card__inner">
+              <div class="card__body">
+                <h4 class="card__title">TOYOTA TUNDRA CREWMAX LIMITED, 2018 TOYOTA TUNDRA</h4>
+                <p class="card__price">$ 19500</p>
+                <ul class="card-list">
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/chassis.svg" alt="Привод иконка"/>
+                    <div class="card-list__text">Задний</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/calendar.svg" alt="Код выпуска иконка"/>
+                    <div class="card-list__text">2018</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/speedometer.svg" alt="Пробег иконка"/>
+                    <div class="card-list__text">25200 км.</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/gas-station.svg" alt="Тип топлива иконка"/>
+                    <div class="card-list__text">Бензин</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/car-engine.svg" alt="Обьем двигателя иконка"/>
+                    <div class="card-list__text">5.7 л.</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/group.svg" alt="Количество владельцев"/>
+                    <div class="card-list__text">1</div>
+                  </li>
+                </ul>
+                <p class="card__text">Машина находится на аукционе в США</p>
+                <button class="card__button">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="card card--zoom"><a class="card__link" href="#">
+              <div class="card__tags"><span class="card__tag tag tag--blue">new</span></div><img class="card__image lazy" alt="..." src="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/kBAxgU849r7689e7bfbfd08d919ec6f7da25038a13.JPG"/></a>
+            <ul class="card-slider card__slider">
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/kBAxgU849r7689e7bfbfd08d919ec6f7da25038a13.JPG" alt=""/></li>
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/j7SeBZ03Dd01c44aa337303ace84935cf2bdbcfc9f.JPG" alt=""/></li>
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/e0YnjVGH4M43af8a33812bb501147f0bf40c31027a.JPG" alt=""/></li>
+            </ul>
+            <div class="card__inner">
+              <div class="card__body">
+                <h4 class="card__title">TOYOTA TUNDRA CREWMAX LIMITED, 2018 TOYOTA TUNDRA</h4>
+                <p class="card__price">$ 19500</p>
+                <ul class="card-list">
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/chassis.svg" alt="Привод иконка"/>
+                    <div class="card-list__text">Задний</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/calendar.svg" alt="Код выпуска иконка"/>
+                    <div class="card-list__text">2018</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/speedometer.svg" alt="Пробег иконка"/>
+                    <div class="card-list__text">25200 км.</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/gas-station.svg" alt="Тип топлива иконка"/>
+                    <div class="card-list__text">Бензин</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/car-engine.svg" alt="Обьем двигателя иконка"/>
+                    <div class="card-list__text">5.7 л.</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/group.svg" alt="Количество владельцев"/>
+                    <div class="card-list__text">1</div>
+                  </li>
+                </ul>
+                <p class="card__text">Машина находится на аукционе в США</p>
+                <button class="card__button">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="card card--zoom"><a class="card__link" href="#">
+              <div class="card__tags"><span class="card__tag tag tag--blue">new</span></div><img class="card__image lazy" alt="..." src="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/kBAxgU849r7689e7bfbfd08d919ec6f7da25038a13.JPG"/></a>
+            <ul class="card-slider card__slider">
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/kBAxgU849r7689e7bfbfd08d919ec6f7da25038a13.JPG" alt=""/></li>
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/j7SeBZ03Dd01c44aa337303ace84935cf2bdbcfc9f.JPG" alt=""/></li>
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/e0YnjVGH4M43af8a33812bb501147f0bf40c31027a.JPG" alt=""/></li>
+            </ul>
+            <div class="card__inner">
+              <div class="card__body">
+                <h4 class="card__title">TOYOTA TUNDRA CREWMAX LIMITED, 2018 TOYOTA TUNDRA</h4>
+                <p class="card__price">$ 19500</p>
+                <ul class="card-list">
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/chassis.svg" alt="Привод иконка"/>
+                    <div class="card-list__text">Задний</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/calendar.svg" alt="Код выпуска иконка"/>
+                    <div class="card-list__text">2018</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/speedometer.svg" alt="Пробег иконка"/>
+                    <div class="card-list__text">25200 км.</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/gas-station.svg" alt="Тип топлива иконка"/>
+                    <div class="card-list__text">Бензин</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/car-engine.svg" alt="Обьем двигателя иконка"/>
+                    <div class="card-list__text">5.7 л.</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/group.svg" alt="Количество владельцев"/>
+                    <div class="card-list__text">1</div>
+                  </li>
+                </ul>
+                <p class="card__text">Машина находится на аукционе в США</p>
+                <button class="card__button">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="card card--zoom"><a class="card__link" href="#">
+              <div class="card__tags"><span class="card__tag tag tag--blue">new</span></div><img class="card__image lazy" alt="..." src="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/kBAxgU849r7689e7bfbfd08d919ec6f7da25038a13.JPG"/></a>
+            <ul class="card-slider card__slider">
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/kBAxgU849r7689e7bfbfd08d919ec6f7da25038a13.JPG" alt=""/></li>
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/j7SeBZ03Dd01c44aa337303ace84935cf2bdbcfc9f.JPG" alt=""/></li>
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/e0YnjVGH4M43af8a33812bb501147f0bf40c31027a.JPG" alt=""/></li>
+            </ul>
+            <div class="card__inner">
+              <div class="card__body">
+                <h4 class="card__title">TOYOTA TUNDRA CREWMAX LIMITED, 2018 TOYOTA TUNDRA</h4>
+                <p class="card__price">$ 19500</p>
+                <ul class="card-list">
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/chassis.svg" alt="Привод иконка"/>
+                    <div class="card-list__text">Задний</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/calendar.svg" alt="Код выпуска иконка"/>
+                    <div class="card-list__text">2018</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/speedometer.svg" alt="Пробег иконка"/>
+                    <div class="card-list__text">25200 км.</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/gas-station.svg" alt="Тип топлива иконка"/>
+                    <div class="card-list__text">Бензин</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/car-engine.svg" alt="Обьем двигателя иконка"/>
+                    <div class="card-list__text">5.7 л.</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/group.svg" alt="Количество владельцев"/>
+                    <div class="card-list__text">1</div>
+                  </li>
+                </ul>
+                <p class="card__text">Машина находится на аукционе в США</p>
+                <button class="card__button">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="card card--zoom"><a class="card__link" href="#">
+              <div class="card__tags"><span class="card__tag tag tag--blue">new</span></div><img class="card__image lazy" alt="..." src="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/kBAxgU849r7689e7bfbfd08d919ec6f7da25038a13.JPG"/></a>
+            <ul class="card-slider card__slider">
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/kBAxgU849r7689e7bfbfd08d919ec6f7da25038a13.JPG" alt=""/></li>
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/j7SeBZ03Dd01c44aa337303ace84935cf2bdbcfc9f.JPG" alt=""/></li>
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/e0YnjVGH4M43af8a33812bb501147f0bf40c31027a.JPG" alt=""/></li>
+            </ul>
+            <div class="card__inner">
+              <div class="card__body">
+                <h4 class="card__title">TOYOTA TUNDRA CREWMAX LIMITED, 2018 TOYOTA TUNDRA</h4>
+                <p class="card__price">$ 19500</p>
+                <ul class="card-list">
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/chassis.svg" alt="Привод иконка"/>
+                    <div class="card-list__text">Задний</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/calendar.svg" alt="Код выпуска иконка"/>
+                    <div class="card-list__text">2018</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/speedometer.svg" alt="Пробег иконка"/>
+                    <div class="card-list__text">25200 км.</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/gas-station.svg" alt="Тип топлива иконка"/>
+                    <div class="card-list__text">Бензин</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/car-engine.svg" alt="Обьем двигателя иконка"/>
+                    <div class="card-list__text">5.7 л.</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/group.svg" alt="Количество владельцев"/>
+                    <div class="card-list__text">1</div>
+                  </li>
+                </ul>
+                <p class="card__text">Машина находится на аукционе в США</p>
+                <button class="card__button">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="card card--zoom"><a class="card__link" href="#">
+              <div class="card__tags"><span class="card__tag tag tag--blue">new</span></div><img class="card__image lazy" alt="..." src="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/kBAxgU849r7689e7bfbfd08d919ec6f7da25038a13.JPG"/></a>
+            <ul class="card-slider card__slider">
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/kBAxgU849r7689e7bfbfd08d919ec6f7da25038a13.JPG" alt=""/></li>
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/j7SeBZ03Dd01c44aa337303ace84935cf2bdbcfc9f.JPG" alt=""/></li>
+              <li class="card-slider__item"><img class="card-slider__image" data-mysrc="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/e0YnjVGH4M43af8a33812bb501147f0bf40c31027a.JPG" alt=""/></li>
+            </ul>
+            <div class="card__inner">
+              <div class="card__body">
+                <h4 class="card__title">TOYOTA TUNDRA CREWMAX LIMITED, 2018 TOYOTA TUNDRA</h4>
+                <p class="card__price">$ 19500</p>
+                <ul class="card-list">
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/chassis.svg" alt="Привод иконка"/>
+                    <div class="card-list__text">Задний</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/calendar.svg" alt="Код выпуска иконка"/>
+                    <div class="card-list__text">2018</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/speedometer.svg" alt="Пробег иконка"/>
+                    <div class="card-list__text">25200 км.</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/gas-station.svg" alt="Тип топлива иконка"/>
+                    <div class="card-list__text">Бензин</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/car-engine.svg" alt="Обьем двигателя иконка"/>
+                    <div class="card-list__text">5.7 л.</div>
+                  </li>
+                  <li class="card-list__item"><img class="card-list__image" src="../icons/group.svg" alt="Количество владельцев"/>
+                    <div class="card-list__text">1</div>
+                  </li>
+                </ul>
+                <p class="card__text">Машина находится на аукционе в США</p>
+                <button class="card__button">Заказать</button>
+              </div>
+            </div>
+          </div>
           <div class="card card--zoom"><a class="card__link" href="#">
               <div class="card__tags"><span class="card__tag tag tag--blue">new</span></div><img class="card__image lazy" alt="..." src="http://u1155413.isp.regruhosting.ru/storage/cars/September2020/kBAxgU849r7689e7bfbfd08d919ec6f7da25038a13.JPG"/></a>
             <ul class="card-slider card__slider">
