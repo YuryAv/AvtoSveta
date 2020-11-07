@@ -17,7 +17,7 @@ $('.index-tabs__button').on('click', function(){
     console.log(dataJSON);
 
     $.ajax({
-        url: "../../../../getTabCars.php",
+        url: 'getTabCars',
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
