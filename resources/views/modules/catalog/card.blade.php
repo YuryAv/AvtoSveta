@@ -22,27 +22,27 @@
             <p class="card__price">$ {{ $car->price }}</p>
             <ul class="card-list">
                 <li class="card-list__item">
-                    <img class="card-list__image" src="../icons/chassis.svg" alt="Привод иконка"/>
+                    <img class="card-list__image" src="{{ asset('storage/icons/chassis.svg') }}" alt="Привод иконка"/>
                     <div class="card-list__text">{{ $car->gear }}</div>
                 </li>
                 <li class="card-list__item">
-                    <img class="card-list__image" src="../icons/calendar.svg" alt="Год выпуска иконка"/>
+                    <img class="card-list__image" src="{{ asset('storage/icons/calendar.svg') }}" alt="Год выпуска иконка"/>
                     <div class="card-list__text">{{ $car->year }}</div>
                 </li>
                 <li class="card-list__item">
-                    <img class="card-list__image" src="../icons/speedometer.svg" alt="Пробег иконка"/>
+                    <img class="card-list__image" src="{{ asset('storage/icons/speedometer.svg') }}" alt="Пробег иконка"/>
                     <div class="card-list__text">{{ $car->mileage }} км.</div>
                 </li>
                 <li class="card-list__item">                    
-                    <img class="card-list__image" src="../icons/gas-station.svg" alt="Тип топлива иконка"/>
+                    <img class="card-list__image" src="{{ asset('storage/icons/gas-station.svg') }}" alt="Тип топлива иконка"/>
                     <div class="card-list__text">{{ $car->fuel }}</div>
                 </li>
                 <li class="card-list__item">
-                    <img class="card-list__image" src="../icons/car-engine.svg" alt="Обьем двигателя иконка"/>
+                    <img class="card-list__image" src="{{ asset('storage/icons/car-engine.svg') }}" alt="Обьем двигателя иконка"/>
                     <div class="card-list__text">{{ $car->capacity }} л.</div>
                 </li>
                 <li class="card-list__item">
-                    <img class="card-list__image" src="../icons/group.svg" alt="Количество владельцев"/>
+                    <img class="card-list__image" src="{{ asset('storage/icons/group.svg') }}" alt="Количество владельцев"/>
                     <div class="card-list__text">1</div>
                 </li>
             </ul>
