@@ -8,9 +8,11 @@
     </div>
     <div class="container">
         <div class="card-wrapper">
-            @foreach($cars as $car)
-                @include('modules.catalog.card')
-            @endforeach
+            @isset($cars)
+                @foreach($cars as $car)
+                    @include('modules.catalog.card')
+                @endforeach
+            @endisset
         </div>
     </div>
 </section>

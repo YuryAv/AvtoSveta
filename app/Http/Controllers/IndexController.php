@@ -17,10 +17,8 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
-        $carTabs = CarTab::all();
-
         return view('index', [
             'reviews' => Review::all(),
             'benefits' => Benefit::all(),
@@ -31,9 +29,7 @@ class IndexController extends Controller
             'contactTabs' => ContactsTab::all(),
             'video' => Video::first(),
             'videoReviews' => VideoReview::all(),
-            'carTabs' => $carTabs,
-//            'cars' => $this->_getCars($carTabs, setting('site.count_tab_cars')),
-            'cars' => $this->_getCars($carTabs[1]),
+            'carTabs' => CarTab::all(),
         ]);
     }
 
