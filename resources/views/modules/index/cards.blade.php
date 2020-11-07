@@ -1,17 +1,10 @@
 <section class="section">
     <div class="container">
-        <form class="index-tabs">
+        <div class="index-tabs">
             @foreach($carTabs as $tab)
-                <label class="index-tabs__label" for="index-tabs{{ $loop->iteration }}">
-                    <input data-tab="{{ $tab->name }}"
-                           class="index-tabs__input"
-                           id="index-tabs{{ $loop->iteration }}"
-                           type="radio" name="index-tabs" />
-{{--                           @if($loop->iteration === 1) checked="checked" @endif/>--}}
-                    <a href="/?carTabId={{$tab->id}}" class="button index-tabs__button">{{ $tab->text }}</a>
-                </label>
+                <button type="button" data-id="{{$tab->id}}" class="button index-tabs__button">{{ $tab->text }}</button>
             @endforeach
-        </form>
+        </div>
     </div>
     <div class="container">
         <div class="card-wrapper">

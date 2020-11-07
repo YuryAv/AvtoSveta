@@ -106,6 +106,7 @@ if ($('.contacts-tabs__item').length > 5) {
 
 $.each(sectionSliders, function (indexInArray, valueOfElement) { 
     $(valueOfElement).slick({
+        lazyLoad: 'ondemand',
         slidesToShow: 4,
         slidesToScroll: 1,
         arrows: true,

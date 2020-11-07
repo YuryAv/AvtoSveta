@@ -6,7 +6,9 @@
             @foreach($reviews as $review)
             <div class="slide-wrap">
                 <div class="benefits-card">
-                    <div class="benefits-card__icon"><img class="benefits-card__image" src="{{ asset("storage/$review->image") }}" alt="{{ $review->name }}"/></div>
+                    <div class="benefits-card__icon">
+                        <img class="benefits-card__image" data-lazy="{{ asset("storage/$review->image") }}" alt="{{ $review->name }}"/>
+                    </div>
                     <h4 class="benefits-card__title benefits-card__title--short">{{ $review->name }}</h4>
                     <h4 class="benefits-card__title">{{ $review->description }}</h4>
                     <p class="benefits-card__text">{{ $review->text }}</p>
