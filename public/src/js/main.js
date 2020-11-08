@@ -7,12 +7,12 @@ $(function () {
     @@include('modules/popup.js')
     @@include('modules/navigation.js')
     @@include('modules/index-video.js')
+    @@include('modules/card.js')
     @@include('modules/index-tabs.js')
     @@include('modules/search.js')
     @@include('modules/select.js')
     @@include('modules/scroll-top.js')
     @@include('modules/filter.js')
-    @@include('modules/card.js')
     @@include('modules/card-inner-tabs.js')
     @@include('modules/slider.js')
 });
