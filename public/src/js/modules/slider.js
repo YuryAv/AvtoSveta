@@ -33,11 +33,11 @@ $('.page-slider__bottom').slick({
     slidesToShow: 5,
     lazyLoad: 'progressive',
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true,
     dots: false,
-    centerMode: true,
+    centerMode: false,
     asNavFor: '.page-slider__top',
-    focusOnSelect: true,
+    focusOnSelect: false,
     infinite: false,
     responsive: [
         {
