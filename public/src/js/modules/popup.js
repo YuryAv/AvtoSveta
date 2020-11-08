@@ -26,8 +26,9 @@ $(document).mouseup(function(e) {
     
 });
 
-// showPopup('.benefits-card__text', 'section.popup#popupText');
+showPopup('.benefits-card__text', 'section.popup#popupText');
 showPopup('.article-info__share', 'section.popup#popupForm');
 showPopup('button.card__button', 'section.popup#popupForm');
 showPopup('a.c-tab__button', 'section.popup#popupMap');
+showPopup('button.card-inner-sidebar__button', 'section.popup#popupForm');
 
