@@ -8,14 +8,16 @@ if ($(window).width() < 1600 && $(window).width() > 991) {
     tabCount = 4;
 };
 
-let dataJSON = JSON.stringify({
-    carTabId: $(this).attr('data-id'),
-    cardTabCount: tabCount
-});
 
-console.log(dataJSON);
 
-let sendAjax = () => {
+let sendAjax = (param) => {
+    let dataJSON = JSON.stringify({
+        carTabId: param,
+        cardTabCount: tabCount
+    });
+
+    console.log(dataJSON);
+
     $.ajax({
         url: 'getTabCars',
         headers: {
@@ -36,4 +38,6 @@ let sendAjax = () => {
 
 sendAjax();
 
-$('.index-tabs__button').on('click', sendAjax);
+$('.index-tabs__button').on('click', function(){
+    sendAjax($(this).attr('data-id'))
+});
