@@ -10,7 +10,7 @@ if ($(window).width() < 1600 && $(window).width() > 991) {
 
 
 
-let sendAjax = (param) => {
+let sendAjax = (param = 0) => {
     let dataJSON = JSON.stringify({
         carTabId: param,
         cardTabCount: tabCount
@@ -28,12 +28,11 @@ let sendAjax = (param) => {
         success: function(result){
             console.log(result);
             $('.section .card-wrapper').html(result);
+            setCardSliderSize();
+            setCardMouseEvents();
+            removeDataSrc();
         },
     });
-    
-    setCardSliderSize();
-    setCardMouseEvents();
-    removeDataSrc();
 };
 
 sendAjax();
