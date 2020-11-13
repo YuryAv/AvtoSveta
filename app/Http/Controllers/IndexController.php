@@ -37,7 +37,7 @@ class IndexController extends Controller
     {
         $tabParams = $request->json()->all();
 
-        $CarTab = CarTab::find($tabParams['carTabId']);
+        $CarTab = $this->_getCarTab($tabParams['carTabId']);
         $cars = $this->_getCars($CarTab, $tabParams['cardTabCount']);
 
         $response = null;
@@ -48,6 +48,16 @@ class IndexController extends Controller
         }
 
         return $response;
+    }
+
+    private function _getCarTab($id)
+    {
+        if ($id == 0)
+        {
+            return CarTab::first();
+        }
+
+        return CarTab::find($id);
     }
 
     private function _getCars($carTab, int $count = 10)
