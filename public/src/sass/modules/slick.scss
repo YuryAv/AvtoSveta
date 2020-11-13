@@ -174,8 +174,8 @@
     &--next {        
         right: 0;
     }
-    &.slick-disabled {
-        opacity: 0.3;
-        cursor: no-drop;
-    }
+}
+.slick-disabled {
+    opacity: 0.3;
+    cursor: no-drop;
 }
