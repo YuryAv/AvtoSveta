@@ -1,5 +1,4 @@
 $('.benefits-card__text').on('click', function(){
-    console.log($('#popupText'))
     if ($('#popupText').length > 0) {
         $('.popup#popupText .popup__container p').text($(this).text());
     } else {
