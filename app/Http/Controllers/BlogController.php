@@ -14,6 +14,7 @@ class BlogController extends Controller
         return view('blog', [
             'cards' => $cards,
             'pageType' => 'blog',
+            'isInnerPage' => false,
         ]);
     }
 
@@ -21,6 +22,7 @@ class BlogController extends Controller
     {
         return view('default-page', [
             'page' => BlogPage::find($id),
+            'isInnerPage' => true,
         ]);
     }
 }

@@ -14,6 +14,7 @@ class ServiceController extends Controller
         return view('blog', [
             'cards' => $cards,
             'pageType' => 'services',
+            'isInnerPage' => false,
         ]);
     }
 
@@ -21,6 +22,7 @@ class ServiceController extends Controller
     {
         return view('default-page', [
             'page' => Service::where('url', $slug)->first(),
+            'isInnerPage' => true,
         ]);
     }
 }

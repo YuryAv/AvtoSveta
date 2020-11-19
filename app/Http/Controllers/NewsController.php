@@ -11,7 +11,10 @@ class NewsController extends Controller
     {
         $news = News::orderBy('created_at', 'desc')->get();
 
-        return view('news', ['news' => $news]);
+        return view('news', [
+            'news' => $news,
+            'isInnerPage' => false,
+        ]);
     }
 
     public function showNews($id)
@@ -20,7 +23,10 @@ class NewsController extends Controller
 
         $news->date = $this->_formatDate($news->created_at);
 
-        return view('news-inner', ['news' => $news]);
+        return view('news-inner', [
+            'news' => $news,
+            'isInnerPage' => true,
+        ]);
     }
 
     private function _formatDate($date)

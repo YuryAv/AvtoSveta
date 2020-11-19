@@ -3,6 +3,7 @@
 @section('content')
 
     @include('modules.index.index-form')
+
     @include('modules.breadcrumbs')
 
     <section class="section">

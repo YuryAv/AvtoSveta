@@ -14,6 +14,7 @@ class StockController extends Controller
         return view('blog', [
             'cards' => $cards,
             'pageType' => 'stocks',
+            'isInnerPage' => false,
         ]);
     }
 
@@ -21,6 +22,7 @@ class StockController extends Controller
     {
         return view('default-page', [
             'page' => Stock::where('url', $slug)->first(),
+            'isInnerPage' => true,
         ]);
     }
 }

@@ -14,6 +14,7 @@ class ReviewController extends Controller
         return view('reviews', [
             'cards' => $cards,
             'pageType' => 'reviews',
+            'isInnerPage' => false,
         ]);
     }
 
@@ -21,6 +22,7 @@ class ReviewController extends Controller
     {
         return view('review-inner', [
             'page' => Review::find($id),
+            'isInnerPage' => true,
         ]);
     }
 }

@@ -4,6 +4,8 @@
 
     @include('modules.index.index-form')
 
+    @include('modules.breadcrumbs')
+
     <section class="section">
         <div class="container">
             <h2 class="section-title">{{ $page->title }}</h2>

@@ -14,6 +14,7 @@ class PageController extends Controller
 
         return view('default-page', [
             'page' => $page,
+            'isInnerPage' => false,
         ]);
     }
 
@@ -28,6 +29,7 @@ class PageController extends Controller
 
         return view('default-page', [
             'page' => $page,
+            'isInnerPage' => true,
         ]);
     }
 }

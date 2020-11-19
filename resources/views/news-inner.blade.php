@@ -11,6 +11,8 @@
 
     @include('modules.index.index-form')
 
+    @include('modules.breadcrumbs')
+
     @include('modules.news.main')
 
     @include('modules.feedback')

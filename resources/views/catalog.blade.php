@@ -13,6 +13,8 @@
 
     @include('modules.index.index-form')
 
+    {{ Breadcrumbs::render('catalog') }}
+
     @include('modules.catalog.main')
 
     @include('modules.catalog.similar')

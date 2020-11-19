@@ -4,6 +4,8 @@
 
     @include('modules.index.index-form')
 
+    {{ Breadcrumbs::render('auction', $auction) }}
+
     <section class="section">
         <div class="container">
             <h2 class="section-title">{{ $auction->title }}</h2>
