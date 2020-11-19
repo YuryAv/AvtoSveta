@@ -25,6 +25,7 @@ class NewsController extends Controller
 
         return view('news-inner', [
             'news' => $news,
+            'page' => $news,
             'isInnerPage' => true,
         ]);
     }
