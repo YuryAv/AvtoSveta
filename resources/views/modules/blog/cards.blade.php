@@ -8,7 +8,7 @@
                     <div class="card__body">
                         <p class="card__date">{{ (new DateTimeImmutable($card->created_at))->format('d.m.Y') }}</p>
                         <p class="card__text">{{ $card->title }}</p>
-                        <p class="card__text">{!! mb_substr($card->text, 0, 150) . '...' !!}</p></p><a class="button button--second card__button" href="{{ "/blog/$card->id" }}">Подробнее</a>
+                        <p class="card__text">{!! mb_substr($card->text, 0, 150) . '...' !!}</p></p><a class="button button--second card__button" href="{{ "/$pageType/" . $card->url }}">Подробнее</a>
                     </div>
                 </div>
             </div>

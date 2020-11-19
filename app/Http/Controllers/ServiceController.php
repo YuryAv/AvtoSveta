@@ -2,25 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\BlogPage;
+use App\Service;
 use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class ServiceController extends Controller
 {
     public function index()
     {
-        $cards = BlogPage::orderBy('created_at', 'desc')->paginate(20);
+        $cards = Service::paginate(20);
 
         return view('blog', [
             'cards' => $cards,
-            'pageType' => 'blog',
+            'pageType' => 'services',
         ]);
     }
 
-    public function showBlog($id)
+    public function showService($slug)
     {
         return view('default-page', [
-            'page' => BlogPage::find($id),
+            'page' => Service::where('url', $slug)->first(),
         ]);
     }
 }

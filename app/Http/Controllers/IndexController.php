@@ -20,7 +20,7 @@ class IndexController extends Controller
     public function index()
     {
         return view('index', [
-            'reviews' => Review::all(),
+            'reviews' => Review::text()->get(),
             'benefits' => Benefit::all(),
             'auctions' => Auction::all(),
             'banners' => Banner::all(),
@@ -28,7 +28,7 @@ class IndexController extends Controller
             'texts' => IndexText::all(),
             'contactTabs' => ContactsTab::all(),
             'video' => Video::first(),
-            'videoReviews' => VideoReview::all(),
+            'videoReviews' => Review::video()->get(),
             'carTabs' => CarTab::all(),
         ]);
     }

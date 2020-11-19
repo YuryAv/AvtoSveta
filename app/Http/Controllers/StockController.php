@@ -2,25 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\BlogPage;
+use App\Stock;
 use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class StockController extends Controller
 {
     public function index()
     {
-        $cards = BlogPage::orderBy('created_at', 'desc')->paginate(20);
+        $cards = Stock::paginate(20);
 
         return view('blog', [
             'cards' => $cards,
-            'pageType' => 'blog',
+            'pageType' => 'stocks',
         ]);
     }
 
-    public function showBlog($id)
+    public function showStock($slug)
     {
         return view('default-page', [
-            'page' => BlogPage::find($id),
+            'page' => Stock::where('url', $slug)->first(),
         ]);
     }
 }

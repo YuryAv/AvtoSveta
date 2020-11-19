@@ -13,17 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/clear-cache', function() {
-    $exitCode = Artisan::call('cache:clear');
-    $exitCode = Artisan::call('config:cache');
-    return 'DONE'; //Return anything
-});
-
 Route::get('/', [\App\Http\Controllers\IndexController::class, 'index'])->name('index');
 
 Route::post('/getTabCars', [\App\Http\Controllers\IndexController::class, 'getTabCars']);
 
-Route::get('/content/{slug?}', [\App\Http\Controllers\PageController::class, 'index']);
+Route::get('/content/', [\App\Http\Controllers\PageController::class, 'index']);
+Route::get('/content/{slug}', [\App\Http\Controllers\PageController::class, 'showContentPage']);
 
 Route::get('/news', [\App\Http\Controllers\NewsController::class, 'index']);
 Route::get('/news/{id?}', [\App\Http\Controllers\NewsController::class, 'showNews']);
@@ -31,17 +26,26 @@ Route::get('/news/{id?}', [\App\Http\Controllers\NewsController::class, 'showNew
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, 'index']);
 Route::get('/blog/{id}', [\App\Http\Controllers\BlogController::class, 'showBlog']);
 
+Route::get('/services', [\App\Http\Controllers\ServiceController::class, 'index']);
+Route::get('/services/{slug}', [\App\Http\Controllers\ServiceController::class, 'showService']);
+
+Route::get('/stocks', [\App\Http\Controllers\StockController::class, 'index']);
+Route::get('/stocks/{slug}', [\App\Http\Controllers\StockController::class, 'showStock']);
+
+Route::get('/reviews', [\App\Http\Controllers\ReviewController::class, 'index']);
+Route::get('/reviews/{id}', [\App\Http\Controllers\ReviewController::class, 'showReview']);
+
 Route::get('/catalog/{brand?}', [\App\Http\Controllers\CatalogController::class, 'index'])->name('catalog');
 
 Route::get('/auction/{id?}', [\App\Http\Controllers\AuctionController::class, 'index']);
 
-Route::get('/delivery', [\App\Http\Controllers\DeliveryController::class, 'index']);
-
-Route::get('/discount', [\App\Http\Controllers\DiscountController::class, 'index']);
-
-Route::get('/repairs', [\App\Http\Controllers\RepairsController::class, 'index']);
-
-Route::get('/track', [\App\Http\Controllers\TrackController::class, 'index']);
+//Route::get('/delivery', [\App\Http\Controllers\DeliveryController::class, 'index']);
+//
+//Route::get('/discount', [\App\Http\Controllers\DiscountController::class, 'index']);
+//
+//Route::get('/repairs', [\App\Http\Controllers\RepairsController::class, 'index']);
+//
+//Route::get('/track', [\App\Http\Controllers\TrackController::class, 'index']);
 
 Route::get('/cars/{id}-{name?}', [\App\Http\Controllers\CardController::class, 'index']);
 

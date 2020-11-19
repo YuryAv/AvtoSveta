@@ -23,7 +23,7 @@ class Car extends Model
 
     public function scopeParamFilters($query, $params, $brand = null)
     {
-        if ($params)
+        if ($params || $brand)
         {
             $filterParams = [
                 'hit' => false,

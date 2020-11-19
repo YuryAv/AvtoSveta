@@ -49,10 +49,10 @@
                                 </g>
                             </svg>
                         </button>
-                        <div class="review__filter"></div><img class="review__image" data-lazy="{{ asset("storage/$review->preview") }}" alt="{{ $review->title }}" />
+                        <div class="review__filter"></div><img class="review__image" data-lazy="{{ asset("storage/$review->image") }}" alt="{{ $review->description }}" />
                     </div>
                     <div class="review__footer">
-                        <h4 class="review__title">{{ $review->title }}</h4>
+                        <h4 class="review__title">{{ $review->description }}</h4>
                     </div>
                 </div>
             </div>
