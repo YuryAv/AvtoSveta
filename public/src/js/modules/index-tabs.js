@@ -11,28 +11,29 @@ if ($(window).width() < 1600 && $(window).width() > 991) {
 
 
 let sendAjax = (param = 0) => {
-    let dataJSON = JSON.stringify({
-        carTabId: param,
-        cardTabCount: tabCount
-    });
+    if (document.querySelector('.index-tabs') != undefined && document.querySelector('.index-tabs') != null) {
+        let dataJSON = JSON.stringify({
+            carTabId: param,
+            cardTabCount: tabCount
+        });
 
-    console.log(dataJSON);
+        console.log(dataJSON);
 
-    $.ajax({
-        url: 'getTabCars',
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        method: 'POST',
-        data: dataJSON,
-        success: function(result){
-            console.log(result);
-            $('.section .card-wrapper').html(result);
-            setCardSliderSize();
-            setCardMouseEvents();
-            removeDataSrc();
-        },
-    });
+        $.ajax({
+            url: 'getTabCars',
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            method: 'POST',
+            data: dataJSON,
+            success: function(result){
+                $('.index-tabs').closest('.section').find('.card-wrapper').html(result);
+                setCardSliderSize();
+                setCardMouseEvents();
+                removeDataSrc();
+            },
+        });
+    }
 };
 
 sendAjax();
