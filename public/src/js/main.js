@@ -15,4 +15,5 @@ $(function () {
     @@include('modules/filter.js')
     @@include('modules/card-inner-tabs.js')
     @@include('modules/slider.js')
+    @@include('modules/validation-forms.js')
 });
